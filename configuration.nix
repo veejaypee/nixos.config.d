@@ -68,7 +68,7 @@
   programs.hyprland = {
     enable = true;
     enableNvidiaPatches = true;
-    };
+  };
   programs.waybar = {
   enable = true;
   };
@@ -135,12 +135,13 @@
     ];
     # Configure your nixpkgs instance
     config = {
-     allowUnfree = true;
-     packageOverrides = pkgs: {
-       unstable = import <nixpkgs-unstable> {
-         config = config.nixpkgs.config;
+      allowUnfree = true;
+      packageOverrides = pkgs: {
+        unstable = import <nixpkgs-unstable> {
+          config = config.nixpkgs.config;
+         };
        };
-     };
+    };
   };
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -321,4 +322,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
-};
+}
