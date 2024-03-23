@@ -93,9 +93,9 @@
   };
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = "altgr-intl";
+    variant = "altgr-intl";
   };
 
   users.defaultUserShell = pkgs.zsh;
@@ -150,7 +150,7 @@
   environment.systemPackages = with pkgs; [
     ## Hyprland
     wofi
-    eww-wayland
+    eww
     ## Sound
     pavucontrol
     # hardware - mouse
