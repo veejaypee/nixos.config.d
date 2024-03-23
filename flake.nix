@@ -13,8 +13,8 @@ inputs.nixpkgs.follows = "nixpkgs";
 # flake-parts.url = "github:hercules-ci/flake-parts";
 };
 
-# outputs = { self, nixpkgs, ... }@inputs:
-outputs = { self, nixpkgs, ... }:
+outputs = { self, nixpkgs, ... }@inputs:
+# outputs = { self, nixpkgs, ... }:
 let
 system = "x86_64-linux";
 pkgs = nixpkgs.legacyPackages.${system};
