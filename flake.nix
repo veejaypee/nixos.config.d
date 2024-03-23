@@ -20,7 +20,7 @@ pkgs = nixpkgs.legacyPackages.${system};
 in {
 nixosConfigurations = {
 ganesha = nixpkgs.lib.nixosSystem {
-specialArgs = {inherit inputs;};
+specialArgs = { inherit inputs; };
 modules = [
 ./hosts/ganesha/configuration.nix 
 # ./modules/nixvim/flake.nix
