@@ -1,0 +1,4 @@
+{
+  globals.mapleader =  " ";
+  globals.maplocalleader = " ";
+}

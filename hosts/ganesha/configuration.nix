@@ -22,6 +22,7 @@
     # Import your generated (nixos-generate-config) hardware configuration
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.default
     (modulesPath + "/profiles/all-hardware.nix")
   ];
 
@@ -109,6 +110,12 @@
     extraGroups = [ "networkmanager" "wheel" "audio" "storage" ];
     packages = with pkgs; [ ];
   };
+
+  home-manager = {
+  extraSpecialArgs = { inherit inputs; };
+  users = {
+  "vjp" = import ./home.nix;
+  }
 
   environment.shells = with pkgs; [ zsh ];
   programs.zsh = {
@@ -226,6 +233,8 @@
     prismlauncher
     # stream
     obs-studio
+    transmission_4-qt
+    mcomix
 
   ];
 
