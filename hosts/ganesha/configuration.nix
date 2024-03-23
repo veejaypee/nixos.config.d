@@ -21,7 +21,7 @@
     # Import your generated (nixos-generate-config) hardware configuration
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    # inputs.home-manager.nixosModules.default
+    inputs.home-manager.nixosModules.default
   ];
 
   # Bootloader.
@@ -108,12 +108,12 @@
     packages = with pkgs; [ ];
   };
 
-  # home-manager = {
-  # # extraSpecialArgs = { inherit inputs; };
-  # users = {
-  # "vjp" = import ./home.nix;
-  # };
-  # };
+home-manager = {
+specialArgs = { inherit inputs; };
+users = {
+"vjp" = import ./home.nix;
+};
+};
 
   environment.shells = with pkgs; [ zsh ];
   programs.zsh = {
