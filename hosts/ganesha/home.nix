@@ -1,40 +1,43 @@
-{ 
-pkgs,
-inputs,
-config,
-...
+{
+  pkgs,
+  inputs,
+  config,
+  ...
 }: {
   imports = [
-  inputs.nixvim.homeManagerModules.nixvim
+    inputs.nixvim.homeManagerModules.nixvim
   ];
   programs.nixvim = {
     enable = true;
+    globals.mapleader = " ";
+    globals.maplocalleader = " ";
     # import ../../modules/nixvim/config
-  colorschemes.capuccin = {
-    enable = true;
-    flavour = "frappe";
+    colorschemes.catppuccin = {
+      enable = true;
+      flavour = "mocha";
+    };
+    plugins = {
+      lsp = {
+        enable = true;
+      };
+      none-ls = {
+        enable = true;
+        enableLspFormat = true;
+        sources.formatting.alejandra.enable = true;
+      };
+      lsp-format.enable = true;
+
+      telescope = {
+        enable = true;
+      };
+      bufferline = {
+        enable = true;
+      };
+    };
   };
-  plugins = {
-  lsp = {
-  enable = true;
-  };
-  non-ls {
-  enable = true;
-  sources.formatting.alejandra.enable = true;
-  };
-  };
-  telescope = {
-  enable = true;
-  };
-  bufferline = {
-    enable = true;
-  };
-  };
-  globals.mapleader =  " ";
-  globals.maplocalleader = " ";
   # config = {
   #  # globals.have_nerd_font = true;
-  # 
+  #
   # options = {
   # ## prompt on exit instead of erroring when files are unvisited
   # cursorline = true;
@@ -42,7 +45,6 @@ config,
   # autochdir = true;
   #     };
   #     };
-  };
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "vjp";
@@ -56,7 +58,6 @@ config,
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
-
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
