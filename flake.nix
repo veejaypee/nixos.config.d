@@ -1,5 +1,5 @@
 {
-description = "Vjps base flake";
+description = "Veits base flake";
 
 inputs = {
 
@@ -22,6 +22,7 @@ outputs = { self, nixpkgs, nixvim, flake-parts, home-manager, ... }@inputs:
 
     let
 system = "x86_64-linux";
+nixconf = import ./hosts/ganesha/configuration.nix {inherit inputs;};
       in {
 nixosConfigurations = {
 ganesha = nixpkgs.lib.nixosSystem {
