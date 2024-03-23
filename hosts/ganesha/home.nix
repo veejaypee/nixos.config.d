@@ -19,12 +19,13 @@ config,
   enable = true;
   };
   non-ls {
-  enable = true
+  enable = true;
   sources.formatting.alejandra.enable = true;
-  }
+  };
+  };
   telescope = {
   enable = true;
-  }
+  };
   bufferline = {
     enable = true;
   };
