@@ -113,7 +113,8 @@
   extraSpecialArgs = { inherit inputs; };
   users = {
   "vjp" = import ./home.nix;
-  }
+  };
+  };
 
   environment.shells = with pkgs; [ zsh ];
   programs.zsh = {
