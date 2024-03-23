@@ -136,12 +136,12 @@ users = {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # neovim nvim neo vim
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
-  };
+  # programs.neovim = {
+  #   enable = true;
+  #   defaultEditor = true;
+  #   viAlias = true;
+  #   vimAlias = true;
+  # };
   environment.variables.EDITOR = "nvim";
 
   # List packages installed in system profile. To search, run:

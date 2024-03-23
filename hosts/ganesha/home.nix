@@ -10,24 +10,38 @@ config,
   programs.nixvim = {
     enable = true;
     # import ../../modules/nixvim/config
-colorschemes.onedark = {
+  colorschemes.capuccin = {
+    enable = true;
+    flavour = "frappe";
+  };
+  plugins = {
+  lsp = {
+  enable = true;
+  };
+  non-ls {
+  enable = true
+  sources.formatting.alejandra.enable = true;
+  }
+  telescope = {
+  enable = true;
+  }
+  bufferline = {
     enable = true;
   };
-  plugins.bufferline = {
-    enable = true;
   };
   globals.mapleader =  " ";
   globals.maplocalleader = " ";
-config = {
- globals.have_nerd_font = true;
-
-options = {
-## prompt on exit instead of erroring when files are unvisited
-cursorline = true;
-confirm = true;
-autochdir = true;
-    };
-    };
+  # config = {
+  #  # globals.have_nerd_font = true;
+  # 
+  # options = {
+  # ## prompt on exit instead of erroring when files are unvisited
+  # cursorline = true;
+  # confirm = true;
+  # autochdir = true;
+  #     };
+  #     };
+  };
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "vjp";
