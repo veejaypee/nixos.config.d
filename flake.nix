@@ -14,7 +14,6 @@ inputs.nixpkgs.follows = "nixpkgs";
 };
 
 outputs = { self, nixpkgs, ... }@inputs:
-# outputs = { self, nixpkgs, ... }:
 let
 system = "x86_64-linux";
 pkgs = nixpkgs.legacyPackages.${system};
