@@ -2,6 +2,7 @@
 description = "Vjps base flake";
 
 inputs = {
+
 nixpkgs.url = "nixpkgs/nixos-unstable";
 
 home-manager = {
@@ -13,10 +14,11 @@ nixvim = {
 url = "github:nix-community/nixvim";
 inputs.nixpkgs.follows = "nixpkgs";
 };
+
 flake-parts.url = "github:hercules-ci/flake-parts";
 };
 
-outputs = { self, nixpkgs, ... }@inputs:
+outputs = { self, nixpkgs, nixvim, flake-parts, ... }@inputs:
 let
 system = "x86_64-linux";
 pkgs = nixpkgs.legacyPackages.${system};
@@ -26,7 +28,7 @@ ganesha = nixpkgs.lib.nixosSystem {
 specialArgs = { inherit inputs; };
 modules = [
 ./hosts/ganesha/configuration.nix 
-./modules/nixvim/config/default.nix
+./modules/nixvim/config
 inputs.home-manager.nixosModules.default
 ];
 };
