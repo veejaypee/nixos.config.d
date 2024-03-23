@@ -21,7 +21,7 @@
     # Import your generated (nixos-generate-config) hardware configuration
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    inputs.home-manager.nixosModules.default
+    # inputs.home-manager.nixosModules.default
   ];
 
   # Bootloader.
@@ -66,7 +66,6 @@
   ## Hyprland
   programs.hyprland = {
     enable = true;
-    enableNvidiaPatches = true;
   };
   programs.waybar = {
   enable = true;
@@ -109,12 +108,12 @@
     packages = with pkgs; [ ];
   };
 
-  home-manager = {
-  # extraSpecialArgs = { inherit inputs; };
-  users = {
-  "vjp" = import ./home.nix;
-  };
-  };
+  # home-manager = {
+  # # extraSpecialArgs = { inherit inputs; };
+  # users = {
+  # "vjp" = import ./home.nix;
+  # };
+  # };
 
   environment.shells = with pkgs; [ zsh ];
   programs.zsh = {
@@ -175,7 +174,7 @@
 
     ## Langs
     gcc # C
-    python3
+    # python3
     nodejs
     ruby
     rustup
@@ -219,7 +218,7 @@
     # stream
     obs-studio
     transmission_4-qt
-    mcomix
+    # mcomix
 
   ];
 
