@@ -1,6 +1,16 @@
-{ config, pkgs, ... }:
-
-{
+{ 
+pkgs,
+inputs,
+config,
+...
+}: {
+  imports = [
+  inputs.nixvim.homeManagerModules.nixvim
+  ];
+  programs.nixvim = {
+    enable = true;
+    # import ../../modules/nixvim/config
+    };
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "vjp";
@@ -14,6 +24,7 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
+
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -71,5 +82,5 @@
   };
 
   # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  programs.home-manager.enable = false;
 }

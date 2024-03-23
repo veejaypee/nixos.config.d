@@ -7,7 +7,6 @@
   lib,
   inputs,
   config,
-  callPackage, 
   ...
 }: {
   imports = [
