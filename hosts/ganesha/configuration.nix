@@ -3,11 +3,10 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 {
-  inputs,
-  lib,
-  config,
   pkgs,
-  modulesPath,
+  lib,
+  inputs,
+  config,
   callPackage, 
   ...
 }: {
@@ -23,7 +22,6 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
-    (modulesPath + "/profiles/all-hardware.nix")
   ];
 
   # Bootloader.
