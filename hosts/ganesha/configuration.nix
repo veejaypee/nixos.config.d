@@ -190,7 +190,6 @@
     tridactyl-native
     chromium
     # media / communication
-    discord
     noisetorch
     spotify
     signal-desktop
