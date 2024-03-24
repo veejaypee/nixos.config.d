@@ -194,7 +194,6 @@
     noisetorch
     spotify
     signal-desktop
-    discord
 
     # flameshot
     grim
