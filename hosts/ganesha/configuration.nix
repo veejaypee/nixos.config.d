@@ -107,6 +107,7 @@
   };
 
   home-manager = {
+    useGlobalPkgs = true;
     extraSpecialArgs = {inherit inputs;};
     users = {
       "vjp" = import ./home.nix;
@@ -193,6 +194,8 @@
     noisetorch
     spotify
     signal-desktop
+    discord
+
     # flameshot
     grim
     ## gaming
