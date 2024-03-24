@@ -1,7 +1,6 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
 {
   pkgs,
   lib,
@@ -27,7 +26,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  environment.pathsToLink = [ "/libexec" ]; # links /libexec from derivations to /run/current-system/sw
+  environment.pathsToLink = ["/libexec"]; # links /libexec from derivations to /run/current-system/sw
 
   networking.hostName = "ganesha"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -54,8 +53,8 @@
   services.xserver = {
     enable = true;
     displayManager.sddm = {
-    enable = true;
-    autoNumlock = true;
+      enable = true;
+      autoNumlock = true;
     };
   };
 
@@ -67,7 +66,7 @@
     enable = true;
   };
   programs.waybar = {
-  enable = true;
+    enable = true;
   };
 
   # Enable networking
@@ -103,18 +102,18 @@
   users.users.vjp = {
     isNormalUser = true;
     description = "VJP";
-    extraGroups = [ "networkmanager" "wheel" "audio" "storage" ];
-    packages = with pkgs; [ ];
+    extraGroups = ["networkmanager" "wheel" "audio" "storage"];
+    packages = with pkgs; [];
   };
 
-home-manager = {
-extraSpecialArgs = { inherit inputs; };
-users = {
-"vjp" = import ./home.nix;
-};
-};
+  home-manager = {
+    extraSpecialArgs = {inherit inputs;};
+    users = {
+      "vjp" = import ./home.nix;
+    };
+  };
 
-  environment.shells = with pkgs; [ zsh ];
+  environment.shells = with pkgs; [zsh];
   programs.zsh = {
     enable = true;
     shellAliases = {
@@ -133,7 +132,7 @@ users = {
       allowUnfree = true;
     };
   };
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # neovim nvim neo vim
   # programs.neovim = {
@@ -206,9 +205,8 @@ users = {
           wineRelease = "staging";
           mingwSupport = true;
         })
-
-        ];
-      })
+      ];
+    })
     protonup-qt
     sunshine
     # minecraft
@@ -218,10 +216,9 @@ users = {
     obs-studio
     transmission_4-qt
     # mcomix
-
   ];
 
-  fonts.packages= with pkgs; [
+  fonts.packages = with pkgs; [
     source-code-pro
     fira-code
     nerdfonts
@@ -261,7 +258,7 @@ users = {
     };
   };
   # nVidia
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {
     # Modesetting is required.
     modesetting.enable = true;
@@ -274,9 +271,9 @@ users = {
 
     # Use the NVidia open source kernel module (not to be confused with the
     # independent third-party "nouveau" open source driver).
-    # Support is limited to the Turing and later architectures. Full list of 
-    # supported GPUs is at: 
-    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
+    # Support is limited to the Turing and later architectures. Full list of
+    # supported GPUs is at:
+    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
     # Only available from driver 515.43.04+
     # Do not disable this unless your GPU is unsupported or if you have a good reason to.
     open = false;
