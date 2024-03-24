@@ -30,9 +30,9 @@
       telescope = {
         enable = true;
       };
-      bufferline = {
-        enable = true;
-      };
+      # bufferline = {
+      #   enable = true;
+      # };
     };
   };
   # config = {
