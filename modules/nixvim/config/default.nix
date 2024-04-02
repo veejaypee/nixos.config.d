@@ -1,6 +1,11 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   imports = [
     ./keymaps.nix
+    ./plugins.nix
   ];
   programs.nixvim = {
     enable = true;
