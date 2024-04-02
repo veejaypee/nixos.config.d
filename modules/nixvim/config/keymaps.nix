@@ -1,4 +1,10 @@
 {
-  globals.mapleader =  " ";
-  globals.maplocalleader = " ";
+  pkgs,
+  config,
+  ...
+}: {
+  programs.nixvim = {
+    globals.mapleader = " ";
+    globals.maplocalleader = " ";
+  };
 }

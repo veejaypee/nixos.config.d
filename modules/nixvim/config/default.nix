@@ -1,14 +1,9 @@
-{
-  # Import all your configuration modules here
-  # imports = [
-  #   ./colorschemes.nix
-  #   ./bufferline.nix
-  #   ./kickstart.nix
-  # ];
+{pkgs, ...}: {
+  imports = [
+    ./keymaps.nix
+  ];
   programs.nixvim = {
     enable = true;
-    globals.mapleader = " ";
-    globals.maplocalleader = " ";
     colorschemes.catppuccin = {
       enable = true;
       flavour = "mocha";
@@ -88,7 +83,7 @@
               action = "signature_help";
               desc = "Signature help";
             };
-            "<F2>" = {
+            "<leader>carn" = {
               action = "rename";
               desc = "Rename variable";
             };
@@ -106,7 +101,7 @@
         enable = true;
       };
 
-      oil.enable = true;
+      oil.enable = false;
 
       # bufferline = {
       #   enable = true;
