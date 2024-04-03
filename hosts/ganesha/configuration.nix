@@ -56,6 +56,47 @@
       enable = true;
       autoNumlock = true;
     };
+    # Configure keymap in X11
+    xkb = {
+      layout = "us";
+      variant = "altgr-intl";
+    };
+    # mouse
+    libinput = {
+      enable = true;
+      # no mouse accel
+      mouse = {
+        accelProfile = "flat";
+      };
+    };
+  };
+  services.xserver.videoDrivers = ["nvidia"];
+  # nVidia
+  hardware.nvidia = {
+    # Modesetting is required.
+    modesetting.enable = true;
+
+    # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
+    powerManagement.enable = false;
+    # Fine-grained power management. Turns off GPU when not in use.
+    # Experimental and only works on modern Nvidia GPUs (Turing or newer).
+    powerManagement.finegrained = false;
+
+    # Use the NVidia open source kernel module (not to be confused with the
+    # independent third-party "nouveau" open source driver).
+    # Support is limited to the Turing and later architectures. Full list of
+    # supported GPUs is at:
+    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
+    # Only available from driver 515.43.04+
+    # Do not disable this unless your GPU is unsupported or if you have a good reason to.
+    open = false;
+
+    # Enable the Nvidia settings menu,
+    # accessible via `nvidia-settings`.
+    nvidiaSettings = true;
+
+    # Optionally, you may need to select the appropriate driver version for your specific GPU.
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
 
   environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
@@ -88,12 +129,6 @@
     LC_PAPER = "de_AT.UTF-8";
     LC_TELEPHONE = "de_AT.UTF-8";
     LC_TIME = "de_AT.UTF-8";
-  };
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "altgr-intl";
   };
 
   users.defaultUserShell = pkgs.zsh;
@@ -236,57 +271,6 @@
   # };
 
   # List services that you want to enable:
-
-  ## X11 & i3
-  #services.xserver = {
-  #  enable = true;
-
-  #  windowManager.i3 = {
-  #    enable = true;
-  #      extraPackages = with pkgs; [
-  #        dmenu
-  #        i3status
-  #        i3lock
-  #        i3blocks
-  #    ];
-  #  };
-  #};
-  # mouse
-  services.xserver.libinput = {
-    enable = true;
-    # no mousse accel
-    mouse = {
-      accelProfile = "flat";
-    };
-  };
-  # nVidia
-  services.xserver.videoDrivers = ["nvidia"];
-  hardware.nvidia = {
-    # Modesetting is required.
-    modesetting.enable = true;
-
-    # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
-    powerManagement.enable = false;
-    # Fine-grained power management. Turns off GPU when not in use.
-    # Experimental and only works on modern Nvidia GPUs (Turing or newer).
-    powerManagement.finegrained = false;
-
-    # Use the NVidia open source kernel module (not to be confused with the
-    # independent third-party "nouveau" open source driver).
-    # Support is limited to the Turing and later architectures. Full list of
-    # supported GPUs is at:
-    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
-    # Only available from driver 515.43.04+
-    # Do not disable this unless your GPU is unsupported or if you have a good reason to.
-    open = false;
-
-    # Enable the Nvidia settings menu,
-    # accessible via `nvidia-settings`.
-    nvidiaSettings = true;
-
-    # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
-  };
 
   # services.flatpak.enable = true;
 
