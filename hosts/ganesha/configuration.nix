@@ -246,7 +246,7 @@
     protonup-qt
     sunshine
     # minecraft
-    openjdk8
+    openjdk17
     prismlauncher
     # stream
     obs-studio
@@ -279,6 +279,7 @@
   # steam
   programs.steam = {
     enable = true;
+    gamescopeSession.enable = true;
   };
 
   # Enable the OpenSSH daemon.
