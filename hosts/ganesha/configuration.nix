@@ -235,16 +235,6 @@
     # flameshot
     grim
     ## gaming
-    (lutris.override {
-      extraPkgs = pkgs: [
-        winetricks
-        libnghttp2
-        (wineWowPackages.full.override {
-          wineRelease = "staging";
-          mingwSupport = true;
-        })
-      ];
-    })
     protonup-qt
     sunshine
     # minecraft
