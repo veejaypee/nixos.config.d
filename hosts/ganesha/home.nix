@@ -22,15 +22,6 @@
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
-  programs.obs-studio = {
-    enable = true;
-    plugins = with pkgs.obs-studio-plugins; [
-      wlrobs
-      obs-backgroundremoval
-      obs-pipewire-audio-capture
-    ];
-  };
-
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
