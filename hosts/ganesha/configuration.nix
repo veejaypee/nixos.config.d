@@ -241,7 +241,6 @@
     openjdk17
     prismlauncher
     # stream
-    obs-studio
     transmission_4-qt
     # mcomix
     yacreader
