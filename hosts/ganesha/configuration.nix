@@ -105,7 +105,7 @@
     nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
   environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
@@ -114,6 +114,7 @@
   ## Hyprland
   programs.hyprland = {
     enable = true;
+    xwayland.enable = true;
   };
   programs.waybar = {
     enable = true;
