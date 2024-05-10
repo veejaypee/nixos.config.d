@@ -1,5 +1,5 @@
 {
-  description = "Veits base flake";
+  description = "veejaypees base flake";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
@@ -22,9 +22,10 @@
   outputs = {
     self,
     nixpkgs,
+    home-manager,
     nixvim,
     flake-parts,
-    home-manager,
+    nix-colors,
     ...
   } @ inputs: let
     system = "x86_64-linux";
