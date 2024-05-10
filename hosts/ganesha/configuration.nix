@@ -147,7 +147,7 @@
   users.users.vjp = {
     isNormalUser = true;
     description = "VJP";
-    extraGroups = ["networkmanager" "wheel" "audio" "storage"];
+    extraGroups = ["networkmanager" "wheel" "audio" "storage" "gamemode"];
     packages = with pkgs; [];
   };
 
@@ -181,8 +181,6 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   environment.variables.EDITOR = "nvim";
-
-  programs.gamemode.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -240,6 +238,8 @@
     ## gaming
     protonup-qt
     sunshine
+
+    vulkan-tools
     # minecraft
     openjdk17
     prismlauncher
@@ -282,6 +282,7 @@
     enable = true;
     gamescopeSession.enable = true;
   };
+  programs.gamemode.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
