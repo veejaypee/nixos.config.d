@@ -237,6 +237,8 @@
     grim
     ## gaming
     protonup-qt
+    winetricks
+    protontricks
     sunshine
 
     vulkan-tools
