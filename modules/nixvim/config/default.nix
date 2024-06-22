@@ -9,6 +9,11 @@
   ];
   programs.nixvim = {
     enable = true;
+    defaultEditor = true;
+    options = {
+      number = true;
+      relativenumber = true;
+    };
     colorschemes.catppuccin = {
       enable = true;
       flavour = "mocha";
@@ -47,6 +52,12 @@
       };
       lsp = {
         enable = true;
+        servers.rust-analyzer = {
+          enable = true;
+          installRustc = false;
+          cargoPackage = false;
+          installCargo = false;
+        };
         keymaps = {
           diagnostic = {
             "[d" = {
@@ -101,26 +112,6 @@
         sources.formatting.alejandra.enable = true;
       };
       lsp-format.enable = true;
-
-      telescope = {
-        enable = true;
-      };
-
-      oil.enable = false;
-
-      # bufferline = {
-      #   enable = true;
-      # };
     };
   };
-  # config = {
-  #  # globals.have_nerd_font = true;
-  #
-  # options = {
-  # ## prompt on exit instead of erroring when files are unvisited
-  # cursorline = true;
-  # confirm = true;
-  # autochdir = true;
-  #     };
-  #     };
 }
