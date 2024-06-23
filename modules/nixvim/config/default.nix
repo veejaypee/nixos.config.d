@@ -32,7 +32,7 @@
 
         autoEnableSources = true;
         settings = {
-          snippet.expand = "snippy";
+          snippet.expand = "function(args) require('snippy').expand_snippet(args.body) end";
           sources = [
             {name = "snippy";}
             {name = "nvim_lsp";}
