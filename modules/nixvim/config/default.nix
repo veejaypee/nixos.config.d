@@ -10,13 +10,13 @@
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
-    options = {
+    opts = {
       number = true;
       relativenumber = true;
     };
     colorschemes.catppuccin = {
       enable = true;
-      flavour = "mocha";
+      settings.flavour = "mocha";
     };
     plugins = {
       cmp-snippy.enable = true;
@@ -52,12 +52,16 @@
       };
       lsp = {
         enable = true;
-        servers.rust-analyzer = {
-          enable = true;
-          installRustc = false;
-          cargoPackage = false;
-          installCargo = false;
+        servers = {
+          rust-analyzer = {
+            enable = true;
+            installRustc = false;
+            cargoPackage = false;
+            installCargo = false;
+          };
+          bashls.enable = true;
         };
+
         keymaps = {
           diagnostic = {
             "[d" = {
@@ -112,6 +116,15 @@
         sources.formatting.alejandra.enable = true;
       };
       lsp-format.enable = true;
+      lsp-lines.enable = true;
+      lsp-status.enable = true;
+      lspkind = {
+        enable = true;
+        cmp.enable = true;
+      };
+      lint.enable = true;
+      nix.enable = true;
+      nvim-autopairs.enable = true;
     };
   };
 }

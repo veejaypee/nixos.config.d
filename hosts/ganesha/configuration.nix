@@ -26,13 +26,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # https://nixos.wiki/wiki/OBS_Studio
-  boot.extraModulePackages = with config.boot.kernelPackages; [
-    v4l2loopback
-  ];
-  boot.extraModprobeConfig = ''
-    options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
-  '';
   security.polkit.enable = true;
 
   environment.pathsToLink = ["/libexec"]; # links /libexec from derivations to /run/current-system/sw
@@ -56,14 +49,17 @@
   };
   services.xserver = {
     enable = true;
-    displayManager.sddm = {
-      enable = true;
-      autoNumlock = true;
-    };
     # Configure keymap in X11
     xkb = {
       layout = "us";
       variant = "altgr-intl";
+    };
+  };
+  services = {
+    displayManager.sddm = {
+      enable = true;
+      autoNumlock = true;
+      wayland.enable = true;
     };
     # mouse
     libinput = {
@@ -74,12 +70,22 @@
       };
     };
   };
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
+  programs.waybar.enable = true;
+
+  # services.kanshi = {
+  #   enable = true;
+  #   systemdTarget = "hyprland-session.target";
+  # };
   services.xserver.videoDrivers = ["nvidia"];
   # nVidia
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
   };
   hardware.nvidia.package = let
     rcu_patch = pkgs.fetchpatch {
@@ -126,13 +132,6 @@
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   ## Hyprland
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-  programs.waybar = {
-    enable = true;
-  };
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -208,7 +207,6 @@
     libratbag
     piper
     # nix os utils
-    nixfmt # .nix formatter
     ranger
     unzip
 
@@ -270,6 +268,8 @@
     transmission_4-qt
     # mcomix
     yacreader
+
+    neofetch
   ];
 
   fonts.packages = with pkgs; [
