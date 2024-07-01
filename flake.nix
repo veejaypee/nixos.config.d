@@ -17,6 +17,11 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
 
     nix-colors.url = "github:misterio77/nix-colors";
+
+    browser-previews = {
+      url = "github:nix-community/browser-previews";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -26,6 +31,7 @@
     nixvim,
     flake-parts,
     nix-colors,
+    browser-previews,
     ...
   } @ inputs: let
     system = "x86_64-linux";

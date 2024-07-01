@@ -240,9 +240,12 @@
     firefox
     tridactyl-native
     chromium
+
+    google-chrome-dev
     # media / communication
     noisetorch
     spotify
+    spotify-player
     signal-desktop
 
     # flameshot
@@ -256,6 +259,7 @@
     vulkan-tools
     # minecraft
     openjdk17
+    openjdk8
     prismlauncher
     # stream
     (pkgs.wrapOBS {
