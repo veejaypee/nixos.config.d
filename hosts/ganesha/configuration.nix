@@ -71,7 +71,9 @@
     xwayland.enable = true;
   };
 
-  programs.waybar.enable = true;
+  programs.waybar = {
+    enable = true;
+  };
 
   # services.kanshi = {
   #   enable = true;
@@ -197,13 +199,16 @@
     ## Hyprland
     wofi
     eww
+    hyprpaper
+    ## ricing
+    bibata-cursors
     ## Sound
     pavucontrol
     # hardware - mouse
     libratbag
     piper
     # nix os utils
-    ranger
+    yazi
     unzip
 
     #Hyperland to XWayland apps clipboard
