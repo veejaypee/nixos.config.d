@@ -125,6 +125,8 @@
       lint.enable = true;
       nix.enable = true;
       nvim-autopairs.enable = true;
+      treesitter.enable = true;
+      rainbow-delimiters.enable = true;
     };
   };
 }

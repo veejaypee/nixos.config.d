@@ -200,13 +200,17 @@
     wofi
     eww
     hyprpaper
+
     ## ricing
     bibata-cursors
+
     ## Sound
     pavucontrol
+
     # hardware - mouse
     libratbag
     piper
+
     # nix os utils
     yazi
     unzip
@@ -224,18 +228,23 @@
 
     ## Langs
     gcc # C
+
     # python3
     nodejs
     ruby
     rustup
+
     ## Dev
     alacritty
     tmux
+    jetbrains.idea-community
+
     # doom emacs deps
     emacs
     ripgrep
     fd
     editorconfig-core-c
+
     ## User apps
     # browser
     firefox
@@ -250,6 +259,7 @@
 
     # flameshot
     grim
+
     ## gaming
     protonup-qt
     winetricks
@@ -257,10 +267,12 @@
     sunshine
 
     vulkan-tools
+
     # minecraft
     openjdk17
     openjdk8
     prismlauncher
+
     # stream
     (pkgs.wrapOBS {
       plugins = with pkgs.obs-studio-plugins; [
