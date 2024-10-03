@@ -200,6 +200,7 @@
     wofi
     eww
     hyprpaper
+    hyprshot
 
     ## ricing
     bibata-cursors
