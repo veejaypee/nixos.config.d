@@ -267,6 +267,8 @@
     protontricks
     sunshine
 
+    lutris
+
     vulkan-tools
 
     # minecraft
