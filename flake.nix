@@ -18,6 +18,8 @@
 
     nix-colors.url = "github:misterio77/nix-colors";
 
+    catppuccin.url = "github:catppuccin/nix";
+
     browser-previews = {
       url = "github:nix-community/browser-previews";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -32,6 +34,7 @@
     flake-parts,
     nix-colors,
     browser-previews,
+    catppuccin,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -45,6 +48,13 @@
           home-manager.nixosModules.home-manager
         ];
       };
+    };
+    homeConfigurations.vjp = home-manager.lib.homeManagerConfiguration {
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      modules = [
+        ./home.nix
+        catppuccin.homeManagerModules.catppuccin
+      ];
     };
   };
 }
