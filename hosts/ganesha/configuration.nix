@@ -75,10 +75,6 @@
     enable = true;
   };
 
-  # services.kanshi = {
-  #   enable = true;
-  #   systemdTarget = "hyprland-session.target";
-  # };
   services.xserver.videoDrivers = ["nvidia"];
   # nVidia
   hardware.graphics = {
@@ -126,10 +122,9 @@
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
   };
 
+  ## Hyprland
   environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
-  ## Hyprland
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -165,8 +160,10 @@
   home-manager = {
     useGlobalPkgs = true;
     extraSpecialArgs = {inherit inputs;};
-    users = {
-      "vjp" = import ./home.nix;
+    users.vjp = {
+      imports = [
+        ./home.nix
+      ];
     };
   };
 
@@ -193,6 +190,9 @@
 
   environment.variables.EDITOR = "nvim";
 
+  ## ricing
+  #catppuccin.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -201,9 +201,6 @@
     eww
     hyprpaper
     hyprshot
-
-    ## ricing
-    bibata-cursors
 
     ## Sound
     pavucontrol

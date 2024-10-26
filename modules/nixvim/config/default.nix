@@ -53,7 +53,7 @@
       lsp = {
         enable = true;
         servers = {
-          rust-analyzer = {
+          rust_analyzer = {
             enable = true;
             installRustc = false;
             cargoPackage = false;
@@ -127,6 +127,7 @@
       nvim-autopairs.enable = true;
       treesitter.enable = true;
       rainbow-delimiters.enable = true;
+      web-devicons.enable = true;
     };
   };
 }

@@ -42,7 +42,7 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/ganesha/configuration.nix
-          inputs.home-manager.nixosModules.default
+          home-manager.nixosModules.home-manager
         ];
       };
     };
