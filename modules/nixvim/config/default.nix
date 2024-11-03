@@ -60,10 +60,11 @@
             installCargo = false;
           };
           bashls.enable = true;
-          angularls = {
-            enable = true;
-            package = null;
-          };
+          ts_ls.enable = true;
+          #angularls = {
+          #  enable = true;
+          #  package = null;
+          #};
         };
 
         keymaps = {
