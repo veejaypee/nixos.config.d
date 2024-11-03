@@ -226,6 +226,7 @@
 
     # python3
 
+    node2nix
     # nodejs
     # typescript
     # typescript-language-server
