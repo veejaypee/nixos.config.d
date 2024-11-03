@@ -225,14 +225,18 @@
     gcc # C
 
     # python3
-    nodejs
-    ruby
+
+    # nodejs
+    # typescript
+    # typescript-language-server
+    # vscode-extensions.angular.ng-template
+    # ruby
     rustup
 
     ## Dev
     alacritty
     tmux
-    jetbrains.idea-community
+    # jetbrains.idea-community
 
     # doom emacs deps
     emacs
