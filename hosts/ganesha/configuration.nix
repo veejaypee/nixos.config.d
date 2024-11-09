@@ -198,6 +198,7 @@
     eww
     hyprpaper
     hyprshot
+    wlr-randr
 
     ## Sound
     pavucontrol

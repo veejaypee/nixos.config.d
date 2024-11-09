@@ -14,16 +14,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    flake-parts.url = "github:hercules-ci/flake-parts";
-
-    nix-colors.url = "github:misterio77/nix-colors";
-
-    catppuccin.url = "github:catppuccin/nix";
-
     browser-previews = {
       url = "github:nix-community/browser-previews";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    flake-parts.url = "github:hercules-ci/flake-parts";
+
+    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs = {
@@ -32,7 +30,6 @@
     home-manager,
     nixvim,
     flake-parts,
-    nix-colors,
     browser-previews,
     catppuccin,
     ...
