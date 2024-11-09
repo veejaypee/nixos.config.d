@@ -76,6 +76,7 @@
   };
 
   services.xserver.videoDrivers = ["nvidia"];
+
   # nVidia
   hardware.graphics = {
     enable = true;
