@@ -14,10 +14,6 @@
       number = true;
       relativenumber = true;
     };
-    colorschemes.catppuccin = {
-      enable = true;
-      settings.flavour = "mocha";
-    };
     plugins = {
       cmp-snippy.enable = true;
       cmp-nvim-lsp.enable = true;

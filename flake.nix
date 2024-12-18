@@ -21,7 +21,7 @@
 
     flake-parts.url = "github:hercules-ci/flake-parts";
 
-    catppuccin.url = "github:catppuccin/nix";
+    stylix.url = "github:danth/stylix";
   };
 
   outputs = {
@@ -31,7 +31,7 @@
     nixvim,
     flake-parts,
     browser-previews,
-    catppuccin,
+    stylix,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -43,6 +43,7 @@
         modules = [
           ./hosts/ganesha/configuration.nix
           home-manager.nixosModules.home-manager
+          stylix.nixosModules.stylix
         ];
       };
     };
@@ -50,7 +51,6 @@
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
       modules = [
         ./home.nix
-        catppuccin.homeManagerModules.catppuccin
       ];
     };
   };
