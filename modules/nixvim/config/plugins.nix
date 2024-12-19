@@ -8,11 +8,6 @@
     telescope = {
       enable = true;
     };
-
     oil.enable = true;
-
-    bufferline = {
-      enable = true;
-    };
   };
 }
