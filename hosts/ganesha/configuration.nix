@@ -13,6 +13,7 @@
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
     ../../modules/google-chrome/config/default.nix
+    ../../modules/stylix/config
   ];
 
   # Bootloader.
@@ -159,10 +160,10 @@
   home-manager = {
     useGlobalPkgs = true;
     extraSpecialArgs = {inherit inputs;};
+    sharedModules = [
+      ../../modules/stylix/config
+    ];
     users.vjp = {
-      stylix = {
-        enable = true;
-      };
       imports = [
         ./home.nix
       ];
@@ -238,9 +239,6 @@
     # ruby
     rustup
 
-    ## Dev
-    alacritty
-    tmux
     # jetbrains.idea-community
 
     # doom emacs deps
@@ -376,13 +374,6 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
-
-  ## Rice
-  stylix = {
-    enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    image = ../../wallpaper.jpg;
-  };
 
   # List services that you want to enable:
 

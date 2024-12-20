@@ -2,12 +2,12 @@
   pkgs,
   inputs,
   config,
-  stylix,
   ...
 }: {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
     ../../modules/nixvim/config
+    ../../modules/home-manager/alacritty/config
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -36,6 +36,8 @@
   home.packages = with pkgs; [
     discord
     vesktop
+    ## Dev
+    tmux
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
