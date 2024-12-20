@@ -10,7 +10,7 @@
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     polarity = "dark";
-    image = ../../../wallpaper.jpg;
+    image = ../../../wallpaper.png;
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
