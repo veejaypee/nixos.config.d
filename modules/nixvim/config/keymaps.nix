@@ -5,6 +5,23 @@
 }: {
   programs.nixvim = {
     globals.mapleader = " ";
+
+    keymaps = [
+      #{
+      #  action = "";
+      #  key = "";
+      #  options = {
+      #  }
+      #  mode {
+      #  }
+      #}
+      {
+        action = "<cmd>Oil<CR>";
+        key = "-";
+        mode = ["n"];
+      }
+    ];
+
     plugins = {
       lsp.keymaps = {
         diagnostic = {
