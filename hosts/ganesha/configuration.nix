@@ -287,7 +287,9 @@
       ];
     })
     transmission_4-qt
-    # mcomix
+
+    # comic & eReading
+    calibre
     yacreader
 
     neofetch
