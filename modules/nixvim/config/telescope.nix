@@ -6,13 +6,15 @@
   programs.nixvim.plugins.telescope = {
     enable = true;
     extensions.fzf-native.enable = true;
+    keymaps = {
+      "<leader>ff" = {
+        action = "find_files";
+        options.desc = "Telescope find files";
+      };
+      "<leader><leader>" = {
+        action = "buffers";
+        options.desc = "Telescope buffers";
+      };
+    };
   };
-  programs.nixvim.keymaps = [
-    {
-      action = "require('telescope.builtin').find_files";
-      key = "<space>ff";
-      mode = ["n"];
-      desc = "Fuzzy find files";
-    }
-  ];
 }

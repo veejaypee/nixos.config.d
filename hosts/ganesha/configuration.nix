@@ -268,6 +268,8 @@
     protontricks
     sunshine
 
+    path-of-building
+
     lutris
 
     vulkan-tools
