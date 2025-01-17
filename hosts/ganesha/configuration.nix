@@ -210,6 +210,8 @@
     # hardware - mouse
     libratbag
     piper
+    ## Benchmarking
+    phoronix-test-suite
 
     # nix os utils
     yazi
@@ -267,8 +269,6 @@
     winetricks
     protontricks
     sunshine
-
-    path-of-building
 
     lutris
 
