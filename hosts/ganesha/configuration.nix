@@ -212,6 +212,8 @@
     piper
     ## Benchmarking
     phoronix-test-suite
+    SDL2
+    openal
 
     # nix os utils
     yazi
