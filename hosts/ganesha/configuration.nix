@@ -64,6 +64,7 @@
       };
     };
   };
+  hardware.wooting.enable = true;
 
   services.xserver.videoDrivers = ["nvidia"];
 
@@ -153,7 +154,7 @@
   users.users.vjp = {
     isNormalUser = true;
     description = "VJP";
-    extraGroups = ["networkmanager" "wheel" "audio" "storage" "gamemode"];
+    extraGroups = ["networkmanager" "wheel" "audio" "storage" "gamemode" "input"];
     packages = with pkgs; [];
   };
 
@@ -207,9 +208,14 @@
     pavucontrol
     helvum
 
-    # hardware - mouse
+    ## Hardware - Mouse
     libratbag
     piper
+
+    ## Hardware - Keyboard
+    wooting-udev-rules
+    wootility
+
     ## Benchmarking
     phoronix-test-suite
     SDL2

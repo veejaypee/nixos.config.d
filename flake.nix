@@ -9,11 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     browser-previews = {
       url = "github:nix-community/browser-previews";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,16 +17,21 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
 
     stylix.url = "github:danth/stylix";
+
+    nixvim = {
+      url = "github:veejaypee/nixvim.config.d";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
-    nixvim,
     flake-parts,
     browser-previews,
     stylix,
+    nixvim,
     ...
   } @ inputs: let
     system = "x86_64-linux";

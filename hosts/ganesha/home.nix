@@ -5,8 +5,6 @@
   ...
 }: {
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim
-    ../../modules/nixvim/config
     ../../modules/home-manager/alacritty/config
   ];
   # Home Manager needs a bit of information about you and the paths it should
@@ -38,6 +36,7 @@
     vesktop
     ## Dev
     tmux
+    inputs.nixvim.packages.${system}.default
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
