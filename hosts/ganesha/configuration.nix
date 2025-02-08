@@ -7,13 +7,15 @@
   inputs,
   config,
   stylix,
+  hyprland,
   ...
 }: {
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
-    ../../modules/google-chrome/config/default.nix
+    ../../modules/google-chrome/config
     ../../modules/stylix/config
+    ../../modules/hyprland
   ];
 
   # Bootloader.
@@ -114,12 +116,7 @@
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
   };
 
-  ## Compositor
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-
+  ## Compositor  programs.hyprland = {
   programs.waybar = {
     enable = true;
   };
@@ -191,6 +188,11 @@
     };
   };
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  ## Hyprland cachix
+  nix.settings = {
+    substituters = ["https://hyprland.cachix.org"];
+    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+  };
 
   environment.variables.EDITOR = "nvim";
 

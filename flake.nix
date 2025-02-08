@@ -1,6 +1,15 @@
 {
   description = "veejaypees base flake";
 
+  nixConfig = {
+    extra-substituters = [
+      "https://hyprland.cachix.org"
+    ];
+    trusted-public-keys = [
+      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+    ];
+  };
+
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
 
@@ -13,6 +22,8 @@
       url = "github:nix-community/browser-previews";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprland.url = "github:hyprw/Hyprland";
 
     flake-parts.url = "github:hercules-ci/flake-parts";
 
@@ -32,6 +43,7 @@
     browser-previews,
     stylix,
     nixvim,
+    hyprland,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -44,6 +56,7 @@
           ./hosts/ganesha/configuration.nix
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
+          hyprland.nixosModules.hyprland
         ];
       };
     };
