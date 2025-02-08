@@ -23,7 +23,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprw/Hyprland";
+    hyprland.url = "github:hyprwm/Hyprland";
 
     flake-parts.url = "github:hercules-ci/flake-parts";
 
