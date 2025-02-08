@@ -56,7 +56,6 @@
           ./hosts/ganesha/configuration.nix
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
-          hyprland.nixosModules.hyprland
         ];
       };
     };
