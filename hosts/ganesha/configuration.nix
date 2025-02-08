@@ -258,6 +258,7 @@
     editorconfig-core-c
 
     ## User apps
+    obsidian
     # browser
     firefox
     tridactyl-native
