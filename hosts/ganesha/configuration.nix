@@ -278,8 +278,6 @@
     winetricks
     protontricks
     sunshine
-    freeciv
-    openra
 
     lutris
 
