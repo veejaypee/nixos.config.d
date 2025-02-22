@@ -6,6 +6,7 @@
 }: {
   imports = [
     ../../modules/home-manager/alacritty/config
+    ../../modules/home-manager/tmux/config
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -35,7 +36,6 @@
     discord
     vesktop
     ## Dev
-    tmux
     inputs.nixvim.packages.${system}.default
 
     # # Adds the 'hello' command to your environment. It prints a friendly

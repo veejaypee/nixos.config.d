@@ -281,6 +281,8 @@
     protontricks
     sunshine
 
+    xonotic
+
     lutris
 
     vulkan-tools
