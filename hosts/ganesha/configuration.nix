@@ -156,7 +156,6 @@
   };
 
   home-manager = {
-    useGlobalPkgs = true;
     extraSpecialArgs = {inherit inputs;};
     sharedModules = [
       ../../modules/stylix/config
@@ -262,8 +261,6 @@
     ## User apps
     obsidian
     # browser
-    firefox
-    tridactyl-native
     chromium
 
     # media / communication

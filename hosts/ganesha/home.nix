@@ -4,6 +4,15 @@
   config,
   ...
 }: {
+  nixpkgs = {
+    # You can add overlays here
+    overlays = [
+    ];
+    # Configure your nixpkgs instance
+    config = {
+      allowUnfree = true;
+    };
+  };
   imports = [
     ../../modules/home-manager/alacritty/config
     ../../modules/home-manager/tmux/config
@@ -21,14 +30,6 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
-
-  # programs.hyprland = {
-  #   enable = true;
-  #   xwayland.enable = true;
-  # };
-  # programs.waybar = {
-  #   enable = true;
-  # };
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -92,4 +93,10 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = false;
+
+  programs = {
+    librewolf = {
+      enable = true;
+    };
+  };
 }
