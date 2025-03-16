@@ -213,6 +213,7 @@
     typescript
     typescript-language-server
     vscode-extensions.angular.ng-template
+    nodePackages."@angular/language-server"
     # ruby
     rustup
 
