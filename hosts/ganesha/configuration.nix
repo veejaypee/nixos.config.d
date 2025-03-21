@@ -153,9 +153,6 @@
   environment.shells = with pkgs; [zsh];
   programs.zsh = {
     enable = true;
-    shellAliases = {
-      nsr = "nix-shell --run";
-    };
   };
   programs.dconf.enable = true;
 
@@ -183,17 +180,9 @@
     wooting-udev-rules
     wootility
 
-    ## Benchmarking
-    phoronix-test-suite
-    SDL2
-    openal
-
     # nix os utils
     yazi
     unzip
-
-    #Hyperland to XWayland apps clipboard
-    wl-clipboard-x11
 
     # classic sys utils
     git
@@ -211,11 +200,15 @@
     node2nix
     nodejs
     typescript
+
+    ## language servers #ls #lsp
+    tree-sitter
+
     typescript-language-server
     vscode-extensions.angular.ng-template
     angular-language-server
-    # ruby
     rustup
+    alejandra
 
     # jetbrains.idea-community
 
