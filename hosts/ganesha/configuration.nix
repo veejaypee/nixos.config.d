@@ -94,6 +94,7 @@
   };
 
   home-manager = {
+    backupFileExtension = "backup";
     extraSpecialArgs = {inherit inputs;};
     sharedModules = [
       ../../modules/stylix/config
