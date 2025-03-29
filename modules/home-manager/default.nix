@@ -6,7 +6,7 @@
   ...
 }: {
   imports = [
-    tmux.nix
+    ./tmux.nix
   ];
   programs = {
     alacritty.enable = true;
