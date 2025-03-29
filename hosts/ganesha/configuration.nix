@@ -148,12 +148,10 @@
     LC_TIME = "de_AT.UTF-8";
   };
 
+  environment.shells = with pkgs; [zsh];
+  programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
-  environment.shells = with pkgs; [zsh];
-  programs.zsh = {
-    enable = true;
-  };
   programs.dconf.enable = true;
 
   environment.variables.EDITOR = "nvim";

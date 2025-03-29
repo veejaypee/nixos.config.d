@@ -26,7 +26,7 @@
         applications = 12;
         desktop = 12;
         popups = 12;
-        terminal = 18;
+        terminal = 16;
       };
     };
   };

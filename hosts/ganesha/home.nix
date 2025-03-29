@@ -14,8 +14,7 @@
     };
   };
   imports = [
-    ../../modules/home-manager/alacritty/config
-    ../../modules/home-manager/tmux/config
+    ../../modules/home-manager/.
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
