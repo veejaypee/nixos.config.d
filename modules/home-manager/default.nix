@@ -11,6 +11,7 @@
   programs = {
     alacritty.enable = true;
 
+    programs.zsh.enable = true;
     starship = {
       enable = true;
       enableZshIntegration = true;
