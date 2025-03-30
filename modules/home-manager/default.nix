@@ -24,7 +24,7 @@
         expireDuplicatesFirst = true;
       };
       initContent = ''
-        bindkey "\u{7f}" delete-char
+        bindkey "^[[3~" delete-char
       '';
     };
 
