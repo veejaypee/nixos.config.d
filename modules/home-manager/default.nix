@@ -18,7 +18,14 @@
       enableCompletion = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
-      history.size = 10000;
+      history = {
+        size = 10000;
+        append = true;
+        expireDuplicatesFirst = true;
+      };
+      initContent = ''
+        bindkey "\u{7f}" delete-char
+      '';
     };
 
     starship = {
