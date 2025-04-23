@@ -32,6 +32,8 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
   # Allow unfree packages
 
+  virtualisation.waydroid.enable = true;
+
   nixpkgs = {
     # You can add overlays here
     overlays = [
@@ -239,11 +241,7 @@
     freeciv
 
     ## retroarch
-    (retroarch.override {
-      cores = with libretro; [
-        snex9x
-      ];
-    })
+    retroarch-full
 
     xonotic
 
