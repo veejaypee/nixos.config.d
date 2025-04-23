@@ -238,8 +238,12 @@
     sunshine
     freeciv
 
-    ## Rom retroarch
-    retroarch-full
+    ## retroarch
+    (retroarch.override {
+      cores = with libretro; [
+        snex9x
+      ];
+    })
 
     xonotic
 
