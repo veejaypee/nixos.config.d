@@ -238,6 +238,9 @@
     sunshine
     freeciv
 
+    ## Rom retroarch
+    retroarch-full
+
     xonotic
 
     lutris
