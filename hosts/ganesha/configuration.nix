@@ -241,7 +241,7 @@
     freeciv
 
     ## retroarch
-    retroarch-full
+    # retroarch-full
 
     xonotic
 
@@ -264,6 +264,8 @@
       ];
     })
     transmission_4-qt
+
+    teamspeak5_client
 
     # comic & eReading
     calibre
