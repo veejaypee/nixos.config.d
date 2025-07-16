@@ -15,6 +15,8 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
 
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,6 +42,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixos-hardware,
     home-manager,
     flake-parts,
     browser-previews,
@@ -56,6 +59,7 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/yorishiro/configuration.nix
+          nixos-hardware.nixosModules.lenovo-thinkpad-p14s-amd-gen5
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
         ];

@@ -1,14 +1,20 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  pkgs,
+  lib,
+  inputs,
+  config,
+  stylix,
+  hyprland,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.default
+    ../../modules/google-chrome/config
+    ../../modules/stylix/config
+    ../../modules/hyprland
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -24,6 +30,8 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Set your time zone.
   time.timeZone = "Europe/Vienna";
@@ -43,17 +51,26 @@
     LC_TIME = "de_AT.UTF-8";
   };
 
-  # Configure keymap in X11
+  # Configure keymap in X11 keeping for XWayland
   services.xserver.xkb = {
     layout = "us";
     variant = "altgr-intl";
+  };
+
+  ## Sound
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.veitp = {
     isNormalUser = true;
     description = "Veit Poigner";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel" "audio" "storage" "input"];
     packages = with pkgs; [];
   };
 
@@ -63,18 +80,37 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  wget
-  alacritty
-  git
-firefox
-wofi
-networkmanagerapplet
-waybar
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    wget
+    alacritty
+    git
+    firefox
+    wofi
+    networkmanagerapplet
+    waybar
   ];
-  
-  programs.hyprland.enable = true;
 
+  ## Login Manager
+  services = {
+    displayManager.sddm = {
+      enable = true;
+      autoNumlock = true;
+      wayland.enable = true;
+    };
+  };
+
+  home-manager = {
+    backupFileExtension = "backup";
+    extraSpecialArgs = {inherit inputs;};
+    sharedModules = [
+      ../../modules/stylix/config
+    ];
+    users.veitp = {
+      imports = [
+        ./home.nix
+      ];
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -102,5 +138,4 @@ waybar
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
-
 }
