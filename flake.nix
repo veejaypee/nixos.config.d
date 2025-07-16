@@ -49,13 +49,13 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    nixconf = import ./hosts/ganesha/configuration.nix {inherit inputs;};
+    nixconf = import ./hosts/yorishiro/configuration.nix {inherit inputs;};
   in {
     nixosConfigurations = {
-      ganesha = nixpkgs.lib.nixosSystem {
+      yorishiro = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
-          ./hosts/ganesha/configuration.nix
+          ./hosts/yorishiro/configuration.nix
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
         ];
