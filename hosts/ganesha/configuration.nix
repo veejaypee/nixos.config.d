@@ -21,7 +21,6 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  # https://nixos.wiki/wiki/OBS_Studio
   environment.pathsToLink = ["/libexec"]; # links /libexec from derivations to /run/current-system/sw
 
   networking.hostName = "ganesha"; # Define your hostname.
@@ -31,8 +30,6 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
   # Allow unfree packages
-
-  virtualisation.waydroid.enable = true;
 
   nixpkgs = {
     # You can add overlays here
@@ -44,11 +41,6 @@
     };
   };
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  ## Hyprland cachix
-  nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
-  };
 
   ## Sound
   security.rtkit.enable = true;
@@ -225,28 +217,17 @@
     chromium
 
     # media / communication
-    noisetorch
     spotify
     spotify-player
     signal-desktop
-
-    # flameshot
-    grim
 
     ## gaming
     protonup-qt
     winetricks
     protontricks
     sunshine
-    freeciv
-
-    ## retroarch
-    # retroarch-full
-
-    xonotic
 
     lutris
-
     vulkan-tools
 
     # minecraft
