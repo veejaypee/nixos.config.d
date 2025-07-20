@@ -52,7 +52,6 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    nixconf = import ./hosts/yorishiro/configuration.nix {inherit inputs;};
   in {
     nixosConfigurations = {
       yorishiro = nixpkgs.lib.nixosSystem {
@@ -60,6 +59,14 @@
         modules = [
           ./hosts/yorishiro/configuration.nix
           nixos-hardware.nixosModules.lenovo-thinkpad-p14s-amd-gen5
+          home-manager.nixosModules.home-manager
+          stylix.nixosModules.stylix
+        ];
+      };
+      ganesha = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/ganesha/configuration.nix
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
         ];

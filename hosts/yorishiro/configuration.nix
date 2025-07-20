@@ -14,6 +14,7 @@
     ../../modules/google-chrome/config
     ../../modules/stylix/config
     ../../modules/hyprland
+    ../../modules/fonts
   ];
 
   # Bootloader.
@@ -57,8 +58,13 @@
     variant = "altgr-intl";
   };
 
+  ## Fingerprint
+  services.fprintd.enable = true;
+  security.pam.services.sudo.fprintAuth = true;
+
   ## Sound
   security.rtkit.enable = true;
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;
