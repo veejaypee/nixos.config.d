@@ -34,6 +34,52 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
+  # BH VPN extra hosts
+  networking.extraHosts = ''
+    127.0.0.1 port-bhyp-b12.bhyp.de
+    127.0.0.1 port-bhyp-b02.bhyp.de
+    127.0.0.1 port-bhyp-b03.bhyp.de
+    127.0.0.1 key-bhyp-b03.bhyp.de
+    127.0.0.1 key-bhyp-b02.bhyp.de
+    127.0.0.1 byperpcs1q.bhyp.de
+    127.0.0.1 byperpcs1d.bhyp.de
+    127.0.0.1 sz-bhyp-e05.bhyp.de
+    127.0.0.1 sz-bhyp-q05.bhyp.de
+    127.0.0.1 ldap-bhyp-b1.bhyp.de
+    127.0.0.1 kbv-bhyp-b02.bhyp.de
+    127.0.0.1 kpo-bhyp-b02.bhyp.de
+    127.0.0.1 atl-bhyp-b01.bhyp.de
+    127.0.0.1 repo-bhyp-b01.bhyp.de
+    127.0.0.1 harbor.bhyp.de
+    127.0.0.1 rancher.bhyp.de
+    127.0.0.1 dp-test-current.bhyp.de
+    127.0.0.1 dp-test-next.bhyp.de
+    127.0.0.1 dp-dev.bhyp.de
+    127.0.0.1 k8st-traefik.bhyp.de
+    127.0.0.1 k8sb-bhyp-b01.bhyp.de
+  '';
+
+  programs.ssh.extraConfig = ''
+     Host port-bhyp-b12.bhyp.de
+    Port 2201
+
+     Host port-bhyp-b02.bhyp.de
+    Port 2202
+
+     Host port-bhyp-b03.bhyp.de
+    Port 2203
+  '';
+
+  # bluetooth
+  services.blueman.enable = true;
+
+  programs.firefox = {
+    enable = true;
+    nativeMessagingHosts.packages = with pkgs; [
+      tridactyl-native
+    ];
+  };
+
   # Set your time zone.
   time.timeZone = "Europe/Vienna";
 
@@ -57,6 +103,10 @@
     layout = "us";
     variant = "altgr-intl";
   };
+
+  # Wayland ENVs for chromium based apps
+  environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   ## Fingerprint
   services.fprintd.enable = true;
@@ -89,7 +139,6 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
-    firefox
     wofi
     networkmanagerapplet
   ];
