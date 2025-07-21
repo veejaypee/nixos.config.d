@@ -15,6 +15,8 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
 
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,6 +42,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixos-hardware,
     home-manager,
     flake-parts,
     browser-previews,
@@ -49,9 +52,17 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    nixconf = import ./hosts/ganesha/configuration.nix {inherit inputs;};
   in {
     nixosConfigurations = {
+      yorishiro = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/yorishiro/configuration.nix
+          nixos-hardware.nixosModules.lenovo-thinkpad-p14s-amd-gen5
+          home-manager.nixosModules.home-manager
+          stylix.nixosModules.stylix
+        ];
+      };
       ganesha = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
