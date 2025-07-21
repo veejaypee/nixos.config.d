@@ -14,6 +14,11 @@
   };
   programs.waybar = {
     enable = true;
+    #  style = ''
+
+    #  '';
+    #  settings = [
+    #  ];
   };
   environment.systemPackages = with pkgs; [
     hyprpaper
