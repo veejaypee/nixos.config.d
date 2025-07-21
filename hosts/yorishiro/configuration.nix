@@ -141,6 +141,58 @@
     git
     wofi
     networkmanagerapplet
+    docker-compose
+    ## Sound Patchbay
+    helvum
+
+    # sys utils
+    unzip
+
+    ripgrep
+    fzf #fuzzySearchFinder
+    fd
+    neofetch
+
+    glib # gsettings
+
+    spotify
+
+    ## Langs
+    gcc
+    #python3
+    nodePackages_latest.nodejs
+    nodenv
+
+    ##Language Server - LS
+    angular-language-server
+    nodePackages_latest.jsonlint
+    vscode-langservers-extracted
+
+    node2nix
+
+    ## Apps
+    vscode
+
+    # media / comms
+    mattermost-desktop
+
+    # tools
+    wl-clipboard
+
+    ## BH
+    vmware-horizon-client
+    sqlcl
+
+    ## Playwright
+    # firefox-bin
+    # patchelf
+
+    insomnia
+    # does not work on 23.11
+    # postman
+
+    ## sclable.com
+    hugo
   ];
 
   ## Login Manager
