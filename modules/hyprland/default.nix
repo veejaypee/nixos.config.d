@@ -28,5 +28,6 @@
     hyprsysteminfo
     hyprpolkitagent
     hyprsunset
+    hyprshot
   ];
 }
