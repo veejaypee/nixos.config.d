@@ -128,13 +128,15 @@
   users.users.veitp = {
     isNormalUser = true;
     description = "Veit Poigner";
-    extraGroups = ["networkmanager" "wheel" "audio" "storage" "input"];
+    extraGroups = ["networkmanager" "wheel" "audio" "storage" "input" "docker"];
     packages = with pkgs; [];
   };
 
   environment.shells = with pkgs; [zsh];
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
+
+  virtualisation.docker.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -148,10 +150,11 @@
     wofi
     networkmanagerapplet
     docker-compose
-    
+
     yazi
     ## Sound Patchbay
     helvum
+    pavucontrol
 
     # sys utils
     unzip
