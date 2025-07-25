@@ -10,12 +10,11 @@
   ];
   home.shell.enableZshIntegration = true;
   programs = {
-    alacritty = { 
+    alacritty = {
       enable = true;
-      settings = ''
-      [env]
-      TERM = xterm-256color
-      ''
+      settings = {
+        env.TERM = "alacritty-direct";
+      };
     };
 
     zsh = {
