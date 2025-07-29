@@ -205,7 +205,7 @@
     wl-clipboard
 
     ## BH
-    vmware-horizon-client
+    omnissa-horizon-client
     sqlcl
 
     ## Playwright
