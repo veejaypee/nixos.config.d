@@ -163,6 +163,7 @@
     wofi
     networkmanagerapplet
     docker-compose
+    dunst
 
     yazi
     ## Sound Patchbay
