@@ -76,6 +76,7 @@
         modules = [
           ./hosts/kamidana/configuration.nix
           home-manager.nixosModules.home-manager
+          nixos-hardware.nixosModules.common-gpu-amd
           stylix.nixosModules.stylix
         ];
       };

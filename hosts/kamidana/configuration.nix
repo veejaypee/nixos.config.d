@@ -10,6 +10,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    inputs.nixos-hardware.nixosModules.common-gpu-amd
     inputs.home-manager.nixosModules.default
     ../../modules/google-chrome/config
     ../../modules/stylix/config
@@ -20,6 +21,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "kamidana"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -82,15 +84,13 @@
   users.users.vjp = {
     isNormalUser = true;
     description = "Veit Poigner";
-    extraGroups = ["networkmanager" "wheel" "audio" "storage" "input" "docker"];
+    extraGroups = ["networkmanager" "wheel" "audio" "storage" "input"];
     packages = with pkgs; [];
   };
 
   environment.shells = with pkgs; [zsh];
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
-
-  virtualisation.docker.enable = true;
 
   programs.obs-studio = {
     enable = true;
@@ -116,7 +116,6 @@
     git
     wofi
     networkmanagerapplet
-    docker-compose
     dunst
 
     yazi
