@@ -71,6 +71,14 @@
           stylix.nixosModules.stylix
         ];
       };
+      kamidana = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/kamidana/configuration.nix
+          home-manager.nixosModules.home-manager
+          stylix.nixosModules.stylix
+        ];
+      };
     };
   };
 }
