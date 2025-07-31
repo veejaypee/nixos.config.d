@@ -18,6 +18,10 @@
     ../../modules/fonts
   ];
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "libxml2-2.13.8"
+  ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -35,12 +39,10 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  programs.firefox = {
-    enable = true;
-    nativeMessagingHosts.packages = with pkgs; [
-      tridactyl-native
-    ];
-  };
+  # bluetooth
+  # hardware.bluetooth.enable = true; # enables support for Bluetooth
+  # hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth
+  # services.blueman.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Vienna";
@@ -88,22 +90,16 @@
     packages = with pkgs; [];
   };
 
+  programs.firefox = {
+    enable = true;
+    nativeMessagingHosts.packages = with pkgs; [
+      tridactyl-native
+    ];
+  };
+
   environment.shells = with pkgs; [zsh];
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
-
-  programs.obs-studio = {
-    enable = true;
-
-    plugins = with pkgs.obs-studio-plugins; [
-      wlrobs
-      obs-backgroundremoval
-      obs-pipewire-audio-capture
-      obs-vaapi #optional AMD hardware acceleration
-      obs-gstreamer
-      obs-vkcapture
-    ];
-  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -129,7 +125,6 @@
     ripgrep
     fzf #fuzzySearchFinder
     fd
-    neofetch
 
     glib # gsettings
 
