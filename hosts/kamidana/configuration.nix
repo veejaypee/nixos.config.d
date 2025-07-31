@@ -11,15 +11,13 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     inputs.nixos-hardware.nixosModules.common-gpu-amd
+    inputs.nixos-hardware.nixosModules.common-cpu-amd-pstate
+    inputs.nixos-hardware.nixosModules.common-pc-ssd
     inputs.home-manager.nixosModules.default
     ../../modules/google-chrome/config
     ../../modules/stylix/config
     ../../modules/hyprland
     ../../modules/fonts
-  ];
-
-  nixpkgs.config.permittedInsecurePackages = [
-    "libxml2-2.13.8"
   ];
 
   # Bootloader.
@@ -28,7 +26,11 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "kamidana"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+
+  hardware.amdgpu.amdvlk = {
+    enable = true;
+    support32Bit.enable = true;
+  };
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -148,13 +150,13 @@
   ];
 
   ## Login Manager
-  services = {
-    displayManager.sddm = {
-      enable = true;
-      autoNumlock = true;
-      wayland.enable = true;
-    };
-  };
+  # services = {
+  #   displayManager.sddm = {
+  #     enable = true;
+  #     autoNumlock = true;
+  #     wayland.enable = true;
+  #   };
+  # };
 
   home-manager = {
     backupFileExtension = "backup";

@@ -75,8 +75,8 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/kamidana/configuration.nix
-          home-manager.nixosModules.home-manager
           nixos-hardware.nixosModules.common-gpu-amd
+          home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
         ];
       };
