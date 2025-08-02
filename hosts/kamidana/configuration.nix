@@ -27,9 +27,15 @@
 
   networking.hostName = "kamidana"; # Define your hostname.
 
-  hardware.amdgpu.amdvlk = {
-    enable = true;
-    support32Bit.enable = true;
+  hardware = {
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
+    amdgpu.amdvlk = {
+      enable = true;
+      support32Bit.enable = true;
+    };
   };
 
   # Configure network proxy if necessary
@@ -65,9 +71,12 @@
   };
 
   # Configure keymap in X11 keeping for XWayland
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "altgr-intl";
+  services.xserver = {
+    enable = true;
+    xkb = {
+      layout = "us";
+      variant = "altgr-intl";
+    };
   };
 
   # Wayland ENVs for chromium based apps
@@ -88,7 +97,7 @@
   users.users.vjp = {
     isNormalUser = true;
     description = "Veit Poigner";
-    extraGroups = ["networkmanager" "wheel" "audio" "storage" "input"];
+    extraGroups = ["networkmanager" "wheel" "audio" "storage" "gamemode" "input"];
     packages = with pkgs; [];
   };
 
@@ -147,16 +156,22 @@
 
     # tools
     wl-clipboard
+    ## gaming
+    protonup-qt
+    winetricks
+    protontricks
+
+    ## benchmark
+    unigine-superposition
   ];
 
   ## Login Manager
-  # services = {
-  #   displayManager.sddm = {
-  #     enable = true;
-  #     autoNumlock = true;
-  #     wayland.enable = true;
-  #   };
-  # };
+  services = {
+    displayManager.sddm = {
+      enable = true;
+      autoNumlock = true;
+    };
+  };
 
   home-manager = {
     backupFileExtension = "backup";
@@ -171,6 +186,15 @@
     };
   };
   environment.variables.EDITOR = "nvim";
+
+  ## gaming
+
+  # steam
+  programs.steam = {
+    enable = true;
+    gamescopeSession.enable = true;
+  };
+  programs.gamemode.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
