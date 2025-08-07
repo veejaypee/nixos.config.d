@@ -3,12 +3,12 @@
 
   nixConfig = {
     extra-substituters = [
-      "https://hyprland.cachix.org"
+      # "https://hyprland.cachix.org"
     ];
     trusted-public-keys = [
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
       "hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs="
-      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+      # "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
     ];
   };
 
@@ -27,7 +27,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/Hyprland";
+    # hyprland.url = "github:hyprwm/Hyprland";
 
     flake-parts.url = "github:hercules-ci/flake-parts";
 
@@ -48,7 +48,7 @@
     browser-previews,
     stylix,
     nixvim,
-    hyprland,
+    # hyprland,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -67,6 +67,15 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/ganesha/configuration.nix
+          home-manager.nixosModules.home-manager
+          stylix.nixosModules.stylix
+        ];
+      };
+      kamidana = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/kamidana/configuration.nix
+          nixos-hardware.nixosModules.common-gpu-amd
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
         ];
