@@ -163,7 +163,7 @@
     wofi
     networkmanagerapplet
     docker-compose
-    dunst
+    mako
 
     yazi
     ## Sound Patchbay
@@ -205,7 +205,7 @@
     wl-clipboard
 
     ## BH
-    omnissa-horizon-client
+    #omnissa-horizon-client
     sqlcl
 
     ## Playwright
