@@ -12,7 +12,6 @@
     keyMode = "vi";
 
     plugins = with pkgs; [
-      tmuxPlugins.catppuccin
     ];
 
     extraConfig = ''
