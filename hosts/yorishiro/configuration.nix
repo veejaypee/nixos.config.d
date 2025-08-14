@@ -20,9 +20,22 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   boot.initrd.luks.devices."luks-6b6a78fe-f573-4b07-a1ec-3f3b886f46bc".device = "/dev/disk/by-uuid/6b6a78fe-f573-4b07-a1ec-3f3b886f46bc";
   networking.hostName = "yorishiro"; # Define your hostname.
+
+  hardware = {
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
+    amdgpu.amdvlk = {
+      enable = true;
+      support32Bit.enable = true;
+    };
+  };
+
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -137,19 +150,6 @@
   users.defaultUserShell = pkgs.zsh;
 
   virtualisation.docker.enable = true;
-
-  programs.obs-studio = {
-    enable = true;
-
-    plugins = with pkgs.obs-studio-plugins; [
-      wlrobs
-      obs-backgroundremoval
-      obs-pipewire-audio-capture
-      obs-vaapi #optional AMD hardware acceleration
-      obs-gstreamer
-      obs-vkcapture
-    ];
-  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
