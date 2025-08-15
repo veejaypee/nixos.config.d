@@ -200,8 +200,6 @@
     typescript-language-server
     vscode-extensions.angular.ng-template
     angular-language-server
-    rustup
-    alejandra
 
     # jetbrains.idea-community
 
