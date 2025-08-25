@@ -228,8 +228,10 @@
       wayland.enable = true;
     };
   };
+  stylix.image = ./wallpaper.png;
 
   home-manager = {
+    useGlobalPkgs = true;
     backupFileExtension = "backup";
     extraSpecialArgs = {inherit inputs;};
     sharedModules = [

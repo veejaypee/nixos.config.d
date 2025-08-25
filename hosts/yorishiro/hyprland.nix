@@ -1,2 +1,8 @@
-{hyprland, ...}: {
+{
+  pkgs,
+  inputs,
+  config,
+  hyprland,
+  ...
+}: {
 }
