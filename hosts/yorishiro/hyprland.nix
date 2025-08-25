@@ -1,7 +1,8 @@
 {
   pkgs,
-  inputs,
   config,
+  inputs,
+  lib,
   hyprland,
   ...
 }: {
