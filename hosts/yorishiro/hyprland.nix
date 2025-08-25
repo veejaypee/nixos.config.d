@@ -55,7 +55,7 @@
 
     # exec-once = $terminal
     # exec-once = nm-applet &
-    exec-once = waybar & nm-applet & blueman-applet
+    exec-once = nm-applet & blueman-applet
 
 
     #############################
