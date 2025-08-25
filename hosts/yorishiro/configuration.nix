@@ -13,8 +13,8 @@
     inputs.home-manager.nixosModules.default
     ../../modules/google-chrome/config
     ../../modules/stylix/config
-    ../../modules/hyprland
     ../../modules/fonts
+    ./hyprland.nix
   ];
 
   # Bootloader.
