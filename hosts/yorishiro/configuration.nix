@@ -48,6 +48,7 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # BH VPN extra hosts
+  # BH BE extra hosts
   networking.extraHosts = ''
     127.0.0.1 port-bhyp-b12.bhyp.de
     127.0.0.1 port-bhyp-b02.bhyp.de
@@ -70,6 +71,18 @@
     127.0.0.1 dp-dev.bhyp.de
     127.0.0.1 k8st-traefik.bhyp.de
     127.0.0.1 k8sb-bhyp-b01.bhyp.de
+    172.16.239.10 postgres.x.sclable.io
+    172.16.239.11 keycloak.x.sclable.io
+    172.16.239.12 wildfly.x.sclable.io
+    172.16.239.13 gateway.x.sclable.io
+    172.16.239.15 zookeeper.x.sclable.io
+    172.16.239.16 kafka.x.sclable.io
+    172.16.239.17 schemaregistry.x.sclable.io
+    172.16.239.19 control-center.x.sclable.io
+    172.16.239.21 oracle.x.sclable.io
+    172.16.239.22 prometheus.x.sclable.io
+    172.16.239.23 grafana.x.sclable.io
+    172.16.239.24 alloy.x.sclable.io
   '';
 
   programs.ssh.extraConfig = ''
@@ -205,7 +218,7 @@
     wl-clipboard
 
     ## BH
-    #omnissa-horizon-client
+    # omnissa-horizon-client
     sqlcl
 
     ## Playwright
