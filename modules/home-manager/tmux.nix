@@ -12,11 +12,13 @@
     keyMode = "vi";
 
     plugins = with pkgs; [
+      tmuxPlugins.catppuccin
     ];
 
     extraConfig = ''
       set -g default-terminal "tmux-256color"
       set -ag terminal-overrides ",xterm-256color:Tc"
+      set -g @catppuccin_flavor 'mocha'
     '';
   };
 }
