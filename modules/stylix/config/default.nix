@@ -29,7 +29,7 @@
       };
     };
     targets = {
-      chromium.enable = false;
+     # chromium.enable = false;
     };
   };
 }
