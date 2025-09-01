@@ -16,7 +16,6 @@
     enable = true;
   };
   environment.systemPackages = with pkgs; [
-    hyprpaper
     hyprlock
     hyprpicker
     hypridle
