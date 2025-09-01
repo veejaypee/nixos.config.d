@@ -44,6 +44,7 @@
     $menu = wofi --show drun
     $snap_window = hyprshot -m window -m active --clipbord-only
     $snap_to_clipboard = hyprshot -m region --clipbord-only
+    $lock_screen = hyprlock
 
 
     #################
@@ -239,7 +240,7 @@
     bind = $mainMod, J, togglesplit, # dwindle
     bind = $mainMod, Y, exec, $snap_to_clipboard,
     bind = $mainMod SHIFT, Y, exec, $snap_window,
-    bind = $mainMod, L, exec, hyprlock,
+    bind = $mainMod SHIFT, L, exec, $lock_screen,
 
     # Move focus with mainMod + arrow keys
     bind = $mainMod, left, movefocus, l
