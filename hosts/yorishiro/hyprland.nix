@@ -218,9 +218,9 @@
     }
 
     # https://wiki.hyprland.org/Configuring/Variables/#gestures
-    gestures {
-        workspace_swipe = false
-    }
+    # gestures {
+    #     workspace_swipe = false
+    # }
 
     ###################
     ### KEYBINDINGS ###
