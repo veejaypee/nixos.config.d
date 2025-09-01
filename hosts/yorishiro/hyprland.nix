@@ -239,6 +239,7 @@
     bind = $mainMod, J, togglesplit, # dwindle
     bind = $mainMod, Y, exec, $snap_to_clipboard,
     bind = $mainMod SHIFT, Y, exec, $snap_window,
+    bind = $mainMod, L, exec, hyprlock,
 
     # Move focus with mainMod + arrow keys
     bind = $mainMod, left, movefocus, l
