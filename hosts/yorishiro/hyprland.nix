@@ -30,7 +30,7 @@
     ################
 
     # See https://wiki.hyprland.org/Configuring/Monitors/
-    monitor=,preferred,auto,auto
+    monitor=,preferred,auto,1
 
 
     ###################
@@ -209,7 +209,7 @@
 
         follow_mouse = 1
 
-        sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
+        sensitivity = 0.5 # -1.0 - 1.0, 0 means no modification.
 
         touchpad {
             natural_scroll = false
