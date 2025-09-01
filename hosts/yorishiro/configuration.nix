@@ -254,7 +254,7 @@
       wayland.enable = true;
     };
   };
-  stylix.image = ./wallpaper.png;
+  # stylix.image = ./wallpaper.png;
 
   home-manager = {
     backupFileExtension = "backup";
