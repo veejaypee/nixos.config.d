@@ -69,6 +69,7 @@
       set -g renumber-windows on # Automatically renumber windows when one is closed
 
       set -g @resurrect-capture-pane-contents 'on'
+      set -g @continuum-restore 'on'
     '';
   };
 }
