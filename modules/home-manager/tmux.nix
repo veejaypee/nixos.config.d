@@ -15,9 +15,9 @@
 
     plugins = with pkgs; [
       tmuxPlugins.catppuccin
-      tmuxPlugins.continuum
-      tmuxPlugins.resurrect
       tmuxPlugins.vim-tmux-navigator
+      tmuxPlugins.resurrect
+      tmuxPlugins.continuum
     ];
 
     extraConfig = ''
@@ -68,8 +68,8 @@
 
       set -g renumber-windows on # Automatically renumber windows when one is closed
 
-      set -g @resurrect-capture-pane-contents 'on'
       set -g @continuum-restore 'on'
+      set -g @resurrect-capture-pane-contents 'on'
     '';
   };
 }
