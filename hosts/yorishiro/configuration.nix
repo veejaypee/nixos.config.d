@@ -162,7 +162,20 @@
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
-  virtualisation.docker.enable = true;
+  virtualisation.docker = {
+    enable = true;
+    # Customize Docker daemon settings using the daemon.settings option
+    daemon.settings = {
+      log-driver = "journald";
+      registry-mirrors = ["https://mirror.gcr.io"];
+      storage-driver = "overlay2";
+    };
+    # Use the rootless mode - run Docker daemon as non-root user
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -241,7 +254,7 @@
       wayland.enable = true;
     };
   };
-  stylix.image = ./wallpaper.png;
+  # stylix.image = ./wallpaper.png;
 
   home-manager = {
     backupFileExtension = "backup";
