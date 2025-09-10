@@ -106,7 +106,7 @@
     nativeMessagingHosts.packages = with pkgs; [
       tridactyl-native
     ];
- };
+  };
 
   environment.shells = with pkgs; [zsh];
   programs.zsh.enable = true;
@@ -157,6 +157,7 @@
     # tools
     wl-clipboard
     ## gaming
+    prismlauncher
     heroic
     protonup-qt
     winetricks
