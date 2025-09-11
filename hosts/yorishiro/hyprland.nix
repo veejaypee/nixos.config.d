@@ -256,7 +256,7 @@
     bind = $mainMod, Y, exec, $snap_to_clipboard,
     bind = $mainMod SHIFT, Y, exec, $snap_window,
     bind = $mainMod SHIFT, L, exec, $lock_screen,
-    bind = $mainMod SHIFT, E, exev, $emoji_menu,
+    bind = $mainMod SHIFT, E, exec, $emoji_menu,
 
     # Move focus with mainMod + arrow keys
     bind = $mainMod, left, movefocus, l
