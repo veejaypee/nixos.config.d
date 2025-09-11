@@ -187,6 +187,7 @@
     wget
     git
     wofi
+    wofi-emoji
     networkmanagerapplet
     docker-compose
     mako
