@@ -16,8 +16,8 @@
     plugins = with pkgs; [
       tmuxPlugins.catppuccin
       tmuxPlugins.vim-tmux-navigator
-      tmuxPlugins.resurrect
       tmuxPlugins.continuum
+      tmuxPlugins.resurrect
     ];
 
     extraConfig = ''
@@ -27,11 +27,14 @@
       set -g @catppuccin_flavor 'mocha'
 
       set -g escape-time 0
-      set -g status-interval 3
+      set -g status-interval 30
       set -g set-clipboard on
       set -g detach-on-destroy off
       set -g history-limit 1000000
       set -g allow-passthrough on
+
+      set -g automatic-rename on
+      set-option -g automatic-rename-format '#{pane_current_command}'
 
       # Split horizontally in CWD with \
       unbind %
