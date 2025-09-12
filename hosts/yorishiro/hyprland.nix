@@ -253,10 +253,10 @@
     bind = $mainMod, R, exec, $menu
     bind = $mainMod, P, pseudo, # dwindle
     bind = $mainMod, J, togglesplit, # dwindle
-    bind = $mainMod, Y, exec, $snap_to_clipboard,
-    bind = $mainMod SHIFT, Y, exec, $snap_window,
-    bind = $mainMod SHIFT, L, exec, $lock_screen,
-    bind = $mainMod SHIFT, E, exec, $emoji_menu,
+    bind = $mainMod, Y, exec, $snap_to_clipboard
+    bind = $mainMod SHIFT, Y, exec, $snap_window
+    bind = $mainMod SHIFT, L, exec, $lock_screen
+    bind = $mainMod SHIFT, E, exec, $emoji_menu
 
     # Move focus with mainMod + arrow keys
     bind = $mainMod, left, movefocus, l
