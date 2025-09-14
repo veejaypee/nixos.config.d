@@ -162,6 +162,7 @@
     protonup-qt
     winetricks
     protontricks
+    calibre
   ];
 
   ## Login Manager
