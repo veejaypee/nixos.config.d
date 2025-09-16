@@ -244,7 +244,7 @@
 
     insomnia
     # does not work on 23.11
-    # postman
+    postman
 
     ## sclable.com
     hugo
