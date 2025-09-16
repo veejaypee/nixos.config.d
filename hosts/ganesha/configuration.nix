@@ -21,6 +21,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   environment.pathsToLink = ["/libexec"]; # links /libexec from derivations to /run/current-system/sw
 
   networking.hostName = "ganesha"; # Define your hostname.
