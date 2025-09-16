@@ -754,11 +754,11 @@
         "nixvim": "nixvim_2"
       },
       "locked": {
-        "lastModified": 1757995658,
-        "narHash": "sha256-bY4La2CHOi1DWMGPWQ991MxS32mzUTkFNgpCb0ewxoc=",
+        "lastModified": 1757997160,
+        "narHash": "sha256-/y2u1FdUBV3SU78SeXXgJwY7Bg4U2CsxC5Z9fQFbppk=",
         "owner": "veejaypee",
         "repo": "nixvim.config.d",
-        "rev": "d5b4e5fa8810a16f8b3c5967c289d27a748bc10b",
+        "rev": "a82a2b38c94bcbbd9c362a27bb19eec755c5b125",
         "type": "github"
       },
       "original": {
