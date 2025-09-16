@@ -215,10 +215,13 @@
     nodePackages_latest.nodejs
     nodenv
 
-    ##Language Server - LS
+    ##Language Server
+    tree-sitter
+
     angular-language-server
     nodePackages_latest.jsonlint
     vscode-langservers-extracted
+    vscode-extensions.angular.ng-template
 
     node2nix
 
