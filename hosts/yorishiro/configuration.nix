@@ -246,8 +246,11 @@
     # does not work on 23.11
     postman
 
-    ## sclable.com
+    ## com
     hugo
+
+    #gdrive sync
+    rclone
   ];
 
   ## Login Manager
