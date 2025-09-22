@@ -227,6 +227,7 @@
 
     ## Apps
     vscode
+    libreoffice
 
     # media / comms
     mattermost-desktop

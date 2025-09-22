@@ -33,9 +33,6 @@
       set -g history-limit 1000000
       set -g allow-passthrough on
 
-      set -g automatic-rename on
-      set-option -g automatic-rename-format '#{pane_current_command}'
-
       # Split horizontally in CWD with \
       unbind %
       bind \\ split-window -h -c "#{pane_current_path}"
@@ -70,6 +67,10 @@
       set -g status-justify centre
 
       set -g renumber-windows on # Automatically renumber windows when one is closed
+
+      set -g allow-rename off
+      set -g automatic-rename on
+      set-option -g automatic-rename-format '#{pane_current_command}'
 
       set -g @continuum-restore 'on'
       set -g @resurrect-capture-pane-contents 'on'
