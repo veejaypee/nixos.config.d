@@ -33,8 +33,9 @@
           "sway/language"
           "battery"
           "battery#bat2"
-          "clock"
           "tray"
+          "clock"
+          "custom/power"
         ];
         keyboard-state = {
           "numlock" = true;
