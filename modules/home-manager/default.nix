@@ -8,6 +8,7 @@
   imports = [
     ./tmux.nix
     ./hyprland.nix
+    ./waybar.nix
   ];
   home.shell.enableZshIntegration = true;
   programs = {
