@@ -177,7 +177,7 @@
     backupFileExtension = "backup";
     extraSpecialArgs = {inherit inputs;};
     sharedModules = [
-      ../../modules/stylix/config
+      ../../modules/home-manager/stylix
     ];
     users.vjp = {
       imports = [

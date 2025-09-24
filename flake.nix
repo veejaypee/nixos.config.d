@@ -63,14 +63,6 @@
           stylix.nixosModules.stylix
         ];
       };
-      ganesha = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
-        modules = [
-          ./hosts/ganesha/configuration.nix
-          home-manager.nixosModules.home-manager
-          stylix.nixosModules.stylix
-        ];
-      };
       kamidana = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
