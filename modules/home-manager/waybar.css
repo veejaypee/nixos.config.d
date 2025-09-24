@@ -1,6 +1,6 @@
 window#waybar,
 tooltip {
-  background: alpha(@base00, 0.000000);
+  background: alpha(@base00, 1.000000);
 }
 
 * {

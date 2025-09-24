@@ -31,7 +31,7 @@
     targets = {
       # chromium.enable = false;
       waybar = {
-        enable = false;
+        enable = true;
       };
     };
   };

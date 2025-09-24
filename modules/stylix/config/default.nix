@@ -8,6 +8,10 @@
 }: {
   stylix = {
     enable = true;
+    opacity = {
+      desktop = 0.25;
+      terminal = 0.9;
+    };
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     polarity = "dark";
     cursor = {

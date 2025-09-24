@@ -9,7 +9,7 @@
   programs.waybar = {
     enable = true;
     systemd.enable = true;
-    style = ./waybar.css;
+    # style = ./waybar.css;
     settings = {
       mainBar = {
         modules-left = [
