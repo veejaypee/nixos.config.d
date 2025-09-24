@@ -11,4 +11,20 @@
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
+  services = {
+    hyprpaper = {
+      enable = true;
+      settings = {
+        ipc = "on";
+        splash = false;
+        splash_offset = 2.0;
+        preload = [
+          "../../hosts/yorishiro/wallpaper.png"
+        ];
+        wallpaper = [
+          ",../../hosts/yorishiro/wallpaper.png"
+        ];
+      };
+    };
+  };
 }

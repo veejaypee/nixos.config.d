@@ -20,5 +20,6 @@
     hyprpolkitagent
     hyprsunset
     hyprshot
+    hyprpaper
   ];
 }
