@@ -33,6 +33,7 @@
       waybar = {
         enable = true;
       };
+      fzf.enable = false;
     };
   };
 }
