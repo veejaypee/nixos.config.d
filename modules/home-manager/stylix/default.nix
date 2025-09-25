@@ -28,12 +28,5 @@
         terminal = 12;
       };
     };
-    targets = {
-      # chromium.enable = false;
-      waybar = {
-        enable = true;
-      };
-      fzf.enable = false;
-    };
   };
 }
