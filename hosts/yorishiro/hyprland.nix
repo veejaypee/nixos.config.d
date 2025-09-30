@@ -253,6 +253,7 @@
     bind = $mainMod, R, exec, $menu
     bind = $mainMod, P, pseudo, # dwindle
     bind = $mainMod, J, togglesplit, # dwindle
+    bind = $mainMod, F, fullscreen,
     bind = $mainMod, Y, exec, $snap_to_clipboard
     bind = $mainMod SHIFT, Y, exec, $snap_window
     bind = $mainMod SHIFT, L, exec, $lock_screen
