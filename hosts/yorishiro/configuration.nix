@@ -212,6 +212,9 @@
     ## Langs
     gcc
     #python3
+    dvc-with-remotes
+
+
     nodePackages_latest.nodejs
     nodenv
 
