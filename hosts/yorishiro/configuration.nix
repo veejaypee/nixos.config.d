@@ -213,7 +213,7 @@
     gcc
     #python3
     dvc-with-remotes
-
+    google-cloud-sdk
 
     nodePackages_latest.nodejs
     nodenv
