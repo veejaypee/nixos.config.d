@@ -144,9 +144,9 @@
     nodenv
 
     ##Language Server - LS
-    angular-language-server
     nodePackages_latest.jsonlint
     vscode-langservers-extracted
+    lua-language-server
 
     node2nix
 
