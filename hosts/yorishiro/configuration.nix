@@ -196,6 +196,7 @@
     # sys utils
     unzip
 
+    direnv
     ripgrep
     fzf #fuzzySearchFinder
     fd
