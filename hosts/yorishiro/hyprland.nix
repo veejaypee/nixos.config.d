@@ -110,7 +110,7 @@
     # https://wiki.hyprland.org/Configuring/Variables/#general
     general {
         gaps_in = 5
-        gaps_out = 20
+        gaps_out = 10
 
         border_size = 2
 
@@ -283,16 +283,19 @@
     bind = $mainMod, 0, workspace, 10
 
     # Move active window to a workspace with mainMod + SHIFT + [0-9]
-    bind = $mainMod SHIFT, 1, movetoworkspace, 1
-    bind = $mainMod SHIFT, 2, movetoworkspace, 2
-    bind = $mainMod SHIFT, 3, movetoworkspace, 3
-    bind = $mainMod SHIFT, 4, movetoworkspace, 4
-    bind = $mainMod SHIFT, 5, movetoworkspace, 5
-    bind = $mainMod SHIFT, 6, movetoworkspace, 6
-    bind = $mainMod SHIFT, 7, movetoworkspace, 7
-    bind = $mainMod SHIFT, 8, movetoworkspace, 8
-    bind = $mainMod SHIFT, 9, movetoworkspace, 9
-    bind = $mainMod SHIFT, 0, movetoworkspace, 10
+    bind = $mainMod SHIFT, 1, movetoworkspacesilent, 1
+    bind = $mainMod SHIFT, 2, movetoworkspacesilent, 2
+    bind = $mainMod SHIFT, 3, movetoworkspacesilent, 3
+    bind = $mainMod SHIFT, 4, movetoworkspacesilent, 4
+    bind = $mainMod SHIFT, 5, movetoworkspacesilent, 5
+    bind = $mainMod SHIFT, 6, movetoworkspacesilent, 6
+    bind = $mainMod SHIFT, 7, movetoworkspacesilent, 7
+    bind = $mainMod SHIFT, 8, movetoworkspacesilent, 8
+    bind = $mainMod SHIFT, 9, movetoworkspacesilent, 9
+    bind = $mainMod SHIFT, 0, movetoworkspacesilent, 10
+
+    # Move active workspace to other monitor
+    bind = $mainMod, o, movecurrentworkspacetomonitor,
 
     # Example special workspace (scratchpad)
     bind = $mainMod, S, togglespecialworkspace, magic
