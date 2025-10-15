@@ -156,6 +156,7 @@
 
   environment.shells = with pkgs; [zsh];
   programs.zsh.enable = true;
+  programs.direnv.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
   virtualisation.docker = {
@@ -196,7 +197,6 @@
     # sys utils
     unzip
 
-    direnv
     ripgrep
     fzf #fuzzySearchFinder
     fd
