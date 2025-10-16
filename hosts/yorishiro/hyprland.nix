@@ -295,7 +295,8 @@
     bind = $mainMod SHIFT, 0, movetoworkspacesilent, 10
 
     # Move active workspace to other monitor
-    bind = $mainMod, o, movecurrentworkspacetomonitor,
+    bind = $mainMod, bracketleft, movecurrentworkspacetomonitor, l
+    bind = $mainMod, bracketright, movecurrentworkspacetomonitor, r
 
     # Example special workspace (scratchpad)
     bind = $mainMod, S, togglespecialworkspace, magic
