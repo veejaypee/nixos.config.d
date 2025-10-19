@@ -56,7 +56,7 @@
         };
       };
     };
-    programs.gradle = {
+    gradle = {
       enable = true;
       settings = {
         "systemProp.jna.library.path" = lib.makeLibraryPath [pkgs.udev];
