@@ -115,13 +115,14 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    ## tools
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
     wofi
     networkmanagerapplet
     dunst
-
+    wl-clipboard
     yazi
     ## Sound Patchbay
     helvum
@@ -129,14 +130,12 @@
 
     # sys utils
     unzip
-
     ripgrep
     fzf #fuzzySearchFinder
     fd
-
     glib # gsettings
-
-    spotify
+    ## DEV
+    jetbrains.idea-community
 
     ## Langs
     gcc
@@ -150,9 +149,8 @@
     lua-language-server
 
     node2nix
-
-    # tools
-    wl-clipboard
+    ## Media
+    spotify
     ## gaming
     prismlauncher
     heroic
