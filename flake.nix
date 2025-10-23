@@ -28,6 +28,7 @@
     };
 
     hyprland.url = "github:hyprwm/Hyprland";
+    hyprhook.url = "github:Hyprhook/Hyprhook";
 
     flake-parts.url = "github:hercules-ci/flake-parts";
 
