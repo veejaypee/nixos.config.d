@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CONFIG_DIR="$HOME/.config/eww-which-key"
+CONFIG_DIR="$HOME/.config/nixos.config.d/modules/home-manager/eww/which-key"
 
 togleBase=false
 
