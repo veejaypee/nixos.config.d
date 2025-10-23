@@ -189,6 +189,7 @@
     docker-compose
     mako
 
+    eww
     yazi
     ## Sound Patchbay
     helvum
@@ -200,6 +201,7 @@
     ripgrep
     fzf #fuzzySearchFinder
     fd
+    jq
     neofetch
 
     glib # gsettings

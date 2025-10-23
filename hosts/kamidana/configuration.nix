@@ -121,9 +121,10 @@
     git
     wofi
     networkmanagerapplet
-    dunst
+    mako
     wl-clipboard
     yazi
+    eww
     ## Sound Patchbay
     helvum
     pavucontrol
