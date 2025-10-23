@@ -27,12 +27,25 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/Hyprland";
-    hyprhook.url = "github:Hyprhook/Hyprhook";
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    flake-parts.url = "github:hercules-ci/flake-parts";
+    hyprhook = {
+      url = "github:Hyprhook/Hyprhook";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    stylix.url = "github:danth/stylix";
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nixvim = {
       url = "github:veejaypee/nixvim.config.d";
