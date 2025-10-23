@@ -157,7 +157,7 @@
     protonup-qt
     winetricks
     protontricks
-    calibre
+    # calibre -- commented out as build is failing
   ];
 
   ## Login Manager

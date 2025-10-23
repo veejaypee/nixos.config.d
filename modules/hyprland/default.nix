@@ -16,7 +16,7 @@
     hyprlock
     hyprpicker
     hypridle
-    hyprsysteminfo
+    # hyprsysteminfo
     hyprpolkitagent
     hyprsunset
     hyprshot
