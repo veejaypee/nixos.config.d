@@ -134,6 +134,7 @@
     fzf #fuzzySearchFinder
     fd
     glib # gsettings
+    jq
     ## DEV
     jetbrains.idea-community
 
