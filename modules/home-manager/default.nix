@@ -62,5 +62,13 @@
         "systemProp.jna.library.path" = lib.makeLibraryPath [pkgs.udev];
       };
     };
+    obs-studio = {
+      enable = true;
+      plugins = with pkgs.obs-studio-plugins; [
+        wlrobs
+        obs-backgroundremoval
+        obs-pipewire-audio-capture
+      ];
+    };
   };
 }
