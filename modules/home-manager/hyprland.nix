@@ -11,7 +11,7 @@
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     plugins = [
-      inputs.hyprhook.packages.${pkgs.stdenv.hostPlatform.system}.hyprhook
+      # inputs.hyprhook.packages.${pkgs.stdenv.hostPlatform.system}.hyprhook
     ];
   };
   services = {

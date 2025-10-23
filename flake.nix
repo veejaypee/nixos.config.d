@@ -34,6 +34,7 @@
 
     hyprhook = {
       url = "github:Hyprhook/Hyprhook";
+      inputs.hyprland.follows = "hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
