@@ -163,6 +163,7 @@
     winetricks
     protontricks
     libratbag
+    piper
     # calibre -- commented out as build is failing
   ];
 
