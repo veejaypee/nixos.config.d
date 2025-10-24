@@ -162,7 +162,6 @@
     protonup-qt
     winetricks
     protontricks
-    libratbag
     piper
     # calibre -- commented out as build is failing
   ];
@@ -205,6 +204,7 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+  services.libratbad.enable = true;
 
   # List services that you want to enable:
 
