@@ -162,6 +162,7 @@
     protonup-qt
     winetricks
     protontricks
+    libratbag
     # calibre -- commented out as build is failing
   ];
 
