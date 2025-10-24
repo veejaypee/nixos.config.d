@@ -204,7 +204,7 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
-  services.libratbad.enable = true;
+  services.ratbagd.enable = true;
 
   # List services that you want to enable:
 
