@@ -141,6 +141,8 @@
 
     ## Langs
     gcc
+    jdk
+    jdk17
     #python3
     nodePackages_latest.nodejs
     nodenv

@@ -210,6 +210,8 @@
 
     ## Langs
     gcc
+    jdk
+    jdk17
     #python3
     dvc-with-remotes
     google-cloud-sdk
