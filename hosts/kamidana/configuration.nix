@@ -151,6 +151,7 @@
     nodePackages_latest.jsonlint
     vscode-langservers-extracted
     lua-language-server
+    jdt-language-server
 
     node2nix
     ## Media
