@@ -247,6 +247,7 @@
     # firefox-bin
     # patchelf
 
+    gemini-cli
     bruno
     insomnia
     # does not work on 23.11
