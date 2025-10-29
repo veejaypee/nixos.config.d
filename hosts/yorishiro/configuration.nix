@@ -247,6 +247,7 @@
     # firefox-bin
     # patchelf
 
+    bruno
     insomnia
     # does not work on 23.11
     postman
