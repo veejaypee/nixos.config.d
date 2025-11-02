@@ -157,6 +157,8 @@
     ## Media
     spotify
     ## gaming
+    bolt-launcher
+    runelite
     prismlauncher
     heroic
     protonup-qt
