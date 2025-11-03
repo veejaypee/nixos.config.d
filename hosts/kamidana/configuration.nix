@@ -161,7 +161,6 @@
     spotify
     ## gaming
     bolt-launcher
-    runelite
     prismlauncher
     heroic
     protonup-qt
@@ -169,6 +168,7 @@
     protontricks
     piper
     # calibre -- commented out as build is failing
+    inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.runlite
   ];
 
   ## Login Manager
