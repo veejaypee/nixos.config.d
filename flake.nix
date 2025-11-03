@@ -67,7 +67,7 @@
   } @ inputs: let
     system = "x86_64-linux";
   in {
-    packages.${system}.runlite = let pkgs = import nixpkgs {inherit system;}; in pkgs.callPackage ./pkgs/runlite.nix {};
+    packages.${system}.runelite = let pkgs = import nixpkgs {inherit system;}; in pkgs.callPackage ./pkgs/runelite.nix {};
     nixosConfigurations = {
       yorishiro = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
