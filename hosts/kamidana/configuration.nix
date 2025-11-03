@@ -168,8 +168,7 @@
     protontricks
     piper
     # calibre -- commented out as build is failing
-    runelite
-    # inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.runlite
+    inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.runlite
   ];
 
   ## Login Manager
