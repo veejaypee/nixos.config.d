@@ -139,6 +139,9 @@
     ## DEV
     jetbrains.idea-community
 
+    ## AI / LLM
+    opencode
+
     ## Langs
     gcc
     jdk
