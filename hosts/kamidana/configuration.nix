@@ -125,6 +125,8 @@
     wl-clipboard
     yazi
     eww
+    ## Vid stuff
+    ffmpeg
     ## Sound Patchbay
     helvum
     pavucontrol
