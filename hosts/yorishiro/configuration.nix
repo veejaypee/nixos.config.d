@@ -223,7 +223,6 @@
     tree-sitter
 
     angular-language-server
-    nodePackages_latest.jsonlint
     vscode-langservers-extracted
     vscode-extensions.angular.ng-template
 

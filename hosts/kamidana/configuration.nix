@@ -153,7 +153,6 @@
     nodenv
 
     ##Language Server - LS
-    nodePackages_latest.jsonlint
     vscode-langservers-extracted
     lua-language-server
     jdt-language-server
