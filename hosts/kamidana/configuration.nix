@@ -128,7 +128,6 @@
     ## Vid stuff
     ffmpeg
     ## Sound Patchbay
-    helvum
     pavucontrol
 
     # sys utils
