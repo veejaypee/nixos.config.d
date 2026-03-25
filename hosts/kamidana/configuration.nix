@@ -155,7 +155,6 @@
     lua-language-server
     jdt-language-server
 
-    node2nix
     ## Media
     spotify
     ## gaming
