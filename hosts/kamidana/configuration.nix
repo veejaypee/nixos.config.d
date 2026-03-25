@@ -138,7 +138,6 @@
     glib # gsettings
     jq
     ## DEV
-    jetbrains.idea-community
 
     ## AI / LLM
     opencode
