@@ -147,6 +147,7 @@
     jdk
     jdk17
     #python3
+    nodejs
     nodenv
 
     ##Language Server - LS
