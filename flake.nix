@@ -65,9 +65,8 @@
     hyprland,
     ...
   } @ inputs: let
-    system = "x86_64-linux";
+    stdenv.hostPlatform.system = "x86_64-linux";
   in {
-    packages.${system}.runelite = let pkgs = import nixpkgs {inherit system;}; in pkgs.callPackage ./pkgs/runelite.nix {};
     nixosConfigurations = {
       yorishiro = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
