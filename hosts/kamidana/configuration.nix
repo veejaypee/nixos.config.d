@@ -155,6 +155,9 @@
     lua-language-server
     jdt-language-server
 
+    ## Gamedev
+    godot
+
     ## Media
     spotify
     ## gaming
