@@ -37,7 +37,7 @@
   home.packages = with pkgs; [
     discord
     ## Dev
-    inputs.nixvim.packages.${stdenv.hostPlatform.system}.default
+    inputs.nixvim.packages.${system}.default
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.

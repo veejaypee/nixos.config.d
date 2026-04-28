@@ -65,7 +65,7 @@
     hyprland,
     ...
   } @ inputs: let
-    stdenv.hostPlatform.system = "x86_64-linux";
+    system = "x86_64-linux";
   in {
     nixosConfigurations = {
       yorishiro = nixpkgs.lib.nixosSystem {

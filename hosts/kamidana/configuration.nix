@@ -164,13 +164,13 @@
     bolt-launcher
     prismlauncher
     heroic
-    lutris
+    # lutris
     protonup-qt
     winetricks
     protontricks
     piper
     # calibre -- commented out as build is failing
-    inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.runelite
+    # inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.runelite
   ];
 
   ## Login Manager
