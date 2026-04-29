@@ -157,6 +157,7 @@
 
     ## Gamedev
     godot
+    blender
 
     ## Media
     spotify
