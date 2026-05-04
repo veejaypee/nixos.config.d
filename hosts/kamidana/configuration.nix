@@ -130,6 +130,7 @@
     ## Sound Patchbay
     pavucontrol
 
+    signal-desktop
     # sys utils
     unzip
     ripgrep
