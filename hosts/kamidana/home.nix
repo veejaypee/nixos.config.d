@@ -35,6 +35,7 @@
   # environment.
   home.packages = with pkgs; [
     discord
+    signal
     ## Dev
     inputs.nixvim.packages.${system}.default
 
