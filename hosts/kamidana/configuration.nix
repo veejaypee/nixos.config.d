@@ -167,7 +167,7 @@
     bolt-launcher
     prismlauncher
     heroic
-    # lutris
+    lutris
     protonup-qt
     winetricks
     protontricks
