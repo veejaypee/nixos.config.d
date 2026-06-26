@@ -144,7 +144,6 @@
     opencode
 
     ## Langs
-    gcc
     jdk
     jdk17
     #python3

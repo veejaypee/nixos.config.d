@@ -30,8 +30,8 @@
       };
     };
   };
-  programs.eww = {
-    enable = true;
-    configDir = ./eww;
-  };
+#  programs.eww = {
+#    enable = true;
+#    configDir = ./eww;
+#  };
 }

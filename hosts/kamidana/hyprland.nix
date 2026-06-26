@@ -7,6 +7,6 @@
   ...
 }: {
   wayland.windowManager.hyprland.extraConfig = ''
-    ${builtins.readFile ./hyprland.conf}
+  ${builtins.readFile ./hyprland.lua}
   '';
 }
