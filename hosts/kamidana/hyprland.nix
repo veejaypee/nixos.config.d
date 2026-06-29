@@ -6,7 +6,7 @@
   hyprland,
   ...
 }: {
-  wayland.windowManager.hyprland.extraConfig = ''
-  ${builtins.readFile ./hyprland.lua}
-  '';
+  wayland.windowManager.hyprland = {
+    configType = "lua";
+    extraConfig = ''${builtins.readFile ./hyprland.lua}'';
 }
