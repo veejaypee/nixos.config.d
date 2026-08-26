@@ -12,7 +12,6 @@ local mainMod = "SUPER"
 ----------------
 -- MONITORS ---
 ----------------
-
 hl.monitor({
     output = "",
     mode = "preferred",
