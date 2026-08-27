@@ -10,7 +10,7 @@
     configType = "lua";
     extraLuaFiles = {
       "main" = {
-        content = ./main.lua
+        content = ./main.lua;
         autoLoad = true;
       };
     };
