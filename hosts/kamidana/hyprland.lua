@@ -26,7 +26,7 @@ hl.monitor({
 -- Set programs that you use
 local terminal    = "alacritty"
 local fileManager = "alacritty -e yazi"
-local menu        = "hyprlauncher"
+local menu        = "wofi --show drun"
 
 
 -------------------
@@ -214,7 +214,7 @@ hl.config({
 hl.config({
     input = {
         kb_layout    = "us",
-        kb_variant   = "",
+        kb_variant   = "altgr-intl",
         kb_model     = "",
         kb_options   = "",
         kb_rules     = "",
