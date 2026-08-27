@@ -122,6 +122,7 @@
     wofi
     networkmanagerapplet
     mako
+    xdg-desktop-portal
     wl-clipboard
     yazi
     eww

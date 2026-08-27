@@ -22,5 +22,6 @@
     hyprsunset
     hyprshot
     hyprpaper
+    xdg-desktop-portal-hyprland
   ];
 }
