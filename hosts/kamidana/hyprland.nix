@@ -7,12 +7,12 @@
   ...
 }: {
   wayland.windowManager.hyprland = {
-    configType = "lua";
-    extraLuaFiles = {
-      "main" = {
-        content = ./main.lua;
-        autoLoad = true;
-      };
-    };
+    configType = "hyprlang";
+#    extraLuaFiles = {
+#     "main.lua" = {
+#       content = ./main.lua;
+#       autoLoad = true;
+#     };
+#   };
   };
 }
