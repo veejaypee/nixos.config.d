@@ -15,24 +15,4 @@
     ];
     configType = "lua";
   };
-  services = {
-    # hyprpaper = {
-    #   enable = true;
-    #   settings = {
-    #     ipc = "on";
-    #     splash = false;
-    #     splash_offset = 2.0;
-    #     preload = [
-    #       "../../hosts/yorishiro/wallpaper.png"
-    #     ];
-    #     wallpaper = [
-    #       ",../../hosts/yorishiro/wallpaper.png"
-    #     ];
-    #   };
-    };
-  };
-#  programs.eww = {
-#    enable = true;
-#    configDir = ./eww;
-#  };
 }
