@@ -21,7 +21,7 @@
     hyprpolkitagent
     hyprsunset
     hyprshot
-  # hyprpaper
-  #  xdg-desktop-portal-hyprland
+    # hyprpaper
+    # xdg-desktop-portal-hyprland
   ];
 }
